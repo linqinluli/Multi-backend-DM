@@ -33,7 +33,7 @@ sudo apt-get install virt-manager libvirt libvirt-python python-virtinst
 sudo mst start
 ```
 
-![1.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\1.png)
+![1.png](figure\1.png)
 
 7）找到网卡设备在哪个PCI插槽
 
