@@ -59,6 +59,6 @@ sudo sh -c "echo never > /sys/kernel/mm/transparent_hugepage/enabled""
 
 2. make menuconfig修改，尝试了一下arm64上找到了可以改的地方，x86没找到在哪改，目前搜索的结果也是x86_64不支持page size的修改
 
-![19.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\19.png)
+![19.png](figure/19.png)
 
 1. The PAGESIZE is set at kernel compile time. That selection is only valid for i386 hardware. If you run a 64-bit system or any other architecture, the page size is 4K and cannot be changed.

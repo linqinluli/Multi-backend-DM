@@ -33,7 +33,7 @@ sudo apt-get install virt-manager libvirt libvirt-python python-virtinst
 sudo mst start
 ```
 
-![1.png](figure\1.png)
+![1.png](figure/1.png)
 
 7）找到网卡设备在哪个PCI插槽
 
@@ -41,7 +41,7 @@ sudo mst start
 sudo mst status
 ```
 
-![2.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\2.png)
+![2.png](figure/2.png)
 
 此处是`/dev/mst/mt4119_pciconf0`
 
@@ -65,7 +65,7 @@ sudo mlxconfig -d /dev/mst/mt4119_pciconf0 set SRIOV_EN=1 NUM_OF_VFS=4 #设置�
 ibstat # 查询端口状态
 ```
 
-![3.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\3.png)
+![3.png](figure/3.png)
 
 这里两个端口mlx5_0和mlx_1，需要使用哪个端口需要保证那个设备参数
 
@@ -77,7 +77,7 @@ Physical state: LinkUp
 ibdev2netdev # 查询端口和网卡绑定状态
 ```
 
-![4.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\4.png)
+![4.png](figure/4.png)
 
 mlx5_0 port 1 ==> enp94s0f0np0 (Up)
 mlx5_1 port 1 ==> enp94s0f1np1 (Up)
@@ -132,7 +132,7 @@ sudo sh -c "echo 4 > /sys/class/infiniband/mlx5_0/device/mlx5_num_vfs"
 lspci -D | grep Mellanox # PCI状态
 ```
 
-![5.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\5.png)
+![5.png](figure/5.png)
 
 这里几个VF的基本信息如下：
 
@@ -151,7 +151,7 @@ lspci -D | grep Mellanox # PCI状态
 ip link show
 ```
 
-![6.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\6.png)
+![6.png](figure/6.png)
 
 看到几个vf都没有分配MAC地址
 
@@ -167,7 +167,7 @@ sudo sh -c "echo 0000:5e:00.2 > /sys/bus/pci/drivers/mlx5_core/bind"
 
 之后运行 `ip link show`，结果如下，可以看到MAC地址已经配置完成，之后使用此VF0进行实验
 
-![7.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\7.png)
+![7.png](figure/7.png)
 
 ### 3.虚拟机配置
 
@@ -175,7 +175,7 @@ sudo sh -c "echo 0000:5e:00.2 > /sys/bus/pci/drivers/mlx5_core/bind"
 
 在添加之前关闭虚拟机
 
-![8.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\8.png)
+![8.png](figure/8.png)
 
 2）为虚拟机安装MLNX_OFED，可参考
 
@@ -200,8 +200,8 @@ ifconfig [网卡名] [ip] up
 
 4）测试RDMA通信情况，至此可以看到kvm虚拟机中RDMA通信成功，可以进行后续实验
 
-![9.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\9.png)
+![9.png](figure/9.png)
 
-![10.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\10.png)
+![10.png](figure/10.png)
 
 Normalized

@@ -39,26 +39,26 @@
 
 [MST does not load · Issue #21 · Azure/azhpc-images (github.com)](https://github.com/Azure/azhpc-images/issues/21)
 
-![11.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\11.png)
+![11.png](figure/11.png)
 
 ```shell
 
 ```
 
-![12.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\12.png)
+![12.png](figure/12.png)
 
 ```shell
 lspci -D | grep Mellanox # PCI状态
 sudo ibdev2netdev -v    # 驱动绑定状态
 ```
 
-![13.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\13.png)
+![13.png](figure/13.png)
 
 4. RDMA测试，参考该网站，有较完整的RDMA测试benchmark
    
    [How To Enable, Verify and Troubleshoot RDMA (mellanox.com)](https://support.mellanox.com/s/article/How-To-Enable-Verify-and-Troubleshoot-RDMA)
    
-   ![10.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\10.png)
+   ![10.png](figure/10.png)
 
 ## 二、Fastswap安装
 
@@ -88,7 +88,7 @@ make
 ./rmserver 50000
 ```
 
-![17.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\17.png)
+![17.png](figure/17.png)
 
 client:
 
@@ -119,7 +119,7 @@ rdma client端（即虚拟机内）运行
 sudo insmod fastswap_rdma.ko sport=50000 sip="20.20.20.110" cip="20.20.20.100" nq=4
 ```
 
-![18.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\18.png)
+![18.png](figure/18.png)
 
 到此fastswap已经安装完成，即初步的并行远内存系统后端搭建完成，下一步在该系统运行不同程序，分析程序特征
 
@@ -131,7 +131,7 @@ sudo insmod fastswap_rdma.ko sport=50000 sip="20.20.20.110" cip="20.20.20.100" n
 
 其中为了编译通过对fastswap_rdma.c文件进行了修改，修改之前报错如下：
 
-![14.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\14.png)
+![14.png](figure/14.png)
 
 针对报错修改如下：
 
@@ -153,7 +153,7 @@ sudo insmod fastswap_rdma.ko sport=40000 sip="20.20.20.21" cip="20.20.20.100" nq
 
 dmesg看到的输出如下，其中用输出debug法定位到问题在ret = rdma_connect(q->cm_id, &param)这个函数，运行到这儿直接阻塞住，进而触发后续的wait失败
 
-![15.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\15.png)
+![15.png](figure/15.png)
 
 rdma_wait_for_cm_failed：
 
@@ -173,7 +173,7 @@ msecs_to_jiffies(CONNECTION_TIMEOUT_MS) + 1)
 
 通过pr_info定位到程序阻塞在了rdma_connect()该函数中
 
-![16.png](D:\study\yjs\SAIL\huawei\DM%20prj\document\figure\16.png)
+![16.png](figure/16.png)
 
 #### 问题解决：
 
