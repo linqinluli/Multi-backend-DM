@@ -40,11 +40,11 @@ res：处理过后的数据，包含部分实验图
 
 由于该项目目前需要分配给多个人同时进行，将任务和虚拟机分配如下(虚拟机运行在实验室服务器SAIL-N2上)：
 
-| 任务描述           | 虚拟机名字       | IP              | 账号           | 密码           |
-|:--------------:|:-----------:|:---------------:|:------------:|:------------:|
-| 主要实验           | cgroup2test | 192.168.122.143 | yanghanzhang | yanghanzhang |
-| Fastswap配置探索   | FastswapExp | 192.168.122.9   | yanghanzhang | yanghanzhang |
-| PostgreSQL配置探索 | PostgreSQL  | 192.168.122.94  | yanghanzhang | yanghanzhang |
+| 任务描述           | 虚拟机名字       | 负责人  | IP              | 账号           | 密码           |
+|:--------------:|:-----------:|:----:|:---------------:|:------------:|:------------:|
+| 主要实验           | cgroup2test | 杨涵章  | 192.168.122.143 | yanghanzhang | yanghanzhang |
+| Fastswap配置探索   | FastswapExp | 王菎运  | 192.168.122.9   | yanghanzhang | yanghanzhang |
+| PostgreSQL配置探索 | PostgreSQL  | 颛孙一鸣 | 192.168.122.94  | yanghanzhang | yanghanzhang |
 
 ### 2. 如何开始实验？
 
@@ -55,5 +55,3 @@ b. 然后通过ssh连接对应虚拟机；
 c. 主要和workload有关的实验在cfm文件夹中，可以参考[CFM](https://github.com/clusterfarmem/cfm)进行运行，目前在cgroup2test文件完成了除PostgreSQL以外所有workload的配置
 
 d. 运行试验记得使用linux中的">> /log/xxx.log"命令将结果存储到log文件中，之后使用code中的log处理文件进行处理
-
-
