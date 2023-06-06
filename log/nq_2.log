@@ -1,0 +1,2567 @@
+container linpack0 already exists, trying to delete
+Setting linpack0 memory limit to 50% (800M) of max
+echo $$ > /cgroup2/benchmarks/linpack0/cgroup.procs && KMP_AFFINITY=nowarnings,compact,1,0,granularity=fine MKL_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_DOMAIN_NUM_THREADS=4 exec taskset -c 0,1,2,3 /usr/bin/time -v /home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64
+Intel(R) Optimized LINPACK Benchmark data
+
+Current date/time: Thu Mar  9 22:50:53 2023
+
+CPU frequency:    3.867 GHz
+Number of CPUs: 8
+Number of cores: 8
+Number of threads: 4
+
+Parameters are set to:
+
+Number of tests: 1
+Number of equations to solve (problem size) : 14000
+Leading dimension of array                  : 14000
+Number of trials to run                     : 1    
+Data alignment value (in Kbytes)            : 4    
+
+Maximum memory requested that can be used=1568284096, at the size=14000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+14000  14000  4      55.450     32.9975  2.164203e-10 3.908321e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+14000  14000  4       32.9975  32.9975 
+
+Residual checks PASSED
+
+End of tests
+
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64"
+	User time (seconds): 83.39
+	System time (seconds): 169.42
+	Percent of CPU this job got: 394%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:04.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 828484
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2293835
+	Minor (reclaiming a frame) page faults: 10555240
+	Voluntary context switches: 136864
+	Involuntary context switches: 11991
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 64.15122699737549 
+
+Major Page Faults,System Time,User Time,Wall Time
+2293835,169.42,83.39,64.11
+Setting linpack0 memory limit to 60% (960M) of max
+echo $$ > /cgroup2/benchmarks/linpack0/cgroup.procs && KMP_AFFINITY=nowarnings,compact,1,0,granularity=fine MKL_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_DOMAIN_NUM_THREADS=4 exec taskset -c 0,1,2,3 /usr/bin/time -v /home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64
+Intel(R) Optimized LINPACK Benchmark data
+
+Current date/time: Thu Mar  9 22:51:58 2023
+
+CPU frequency:    3.667 GHz
+Number of CPUs: 8
+Number of cores: 8
+Number of threads: 4
+
+Parameters are set to:
+
+Number of tests: 1
+Number of equations to solve (problem size) : 14000
+Leading dimension of array                  : 14000
+Number of trials to run                     : 1    
+Data alignment value (in Kbytes)            : 4    
+
+Maximum memory requested that can be used=1568284096, at the size=14000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+14000  14000  4      47.462     38.5518  2.164203e-10 3.908321e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+14000  14000  4       38.5518  38.5518 
+
+Residual checks PASSED
+
+End of tests
+
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64"
+	User time (seconds): 81.72
+	System time (seconds): 140.45
+	Percent of CPU this job got: 390%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:56.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 996860
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1964104
+	Minor (reclaiming a frame) page faults: 8658885
+	Voluntary context switches: 101879
+	Involuntary context switches: 9997
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 56.89958333969116 
+
+Major Page Faults,System Time,User Time,Wall Time
+1964104,140.45,81.72,56.87
+Setting linpack0 memory limit to 70% (1120M) of max
+echo $$ > /cgroup2/benchmarks/linpack0/cgroup.procs && KMP_AFFINITY=nowarnings,compact,1,0,granularity=fine MKL_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_DOMAIN_NUM_THREADS=4 exec taskset -c 0,1,2,3 /usr/bin/time -v /home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64
+Intel(R) Optimized LINPACK Benchmark data
+
+Current date/time: Thu Mar  9 22:52:55 2023
+
+CPU frequency:    3.863 GHz
+Number of CPUs: 8
+Number of cores: 8
+Number of threads: 4
+
+Parameters are set to:
+
+Number of tests: 1
+Number of equations to solve (problem size) : 14000
+Leading dimension of array                  : 14000
+Number of trials to run                     : 1    
+Data alignment value (in Kbytes)            : 4    
+
+Maximum memory requested that can be used=1568284096, at the size=14000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+14000  14000  4      39.258     46.6080  2.164203e-10 3.908321e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+14000  14000  4       46.6080  46.6080 
+
+Residual checks PASSED
+
+End of tests
+
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64"
+	User time (seconds): 78.90
+	System time (seconds): 109.71
+	Percent of CPU this job got: 388%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:48.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1155732
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1553434
+	Minor (reclaiming a frame) page faults: 6806021
+	Voluntary context switches: 80380
+	Involuntary context switches: 7730
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 48.519962549209595 
+
+Major Page Faults,System Time,User Time,Wall Time
+1553434,109.71,78.9,48.49
+Setting linpack0 memory limit to 80% (1280M) of max
+echo $$ > /cgroup2/benchmarks/linpack0/cgroup.procs && KMP_AFFINITY=nowarnings,compact,1,0,granularity=fine MKL_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_DOMAIN_NUM_THREADS=4 exec taskset -c 0,1,2,3 /usr/bin/time -v /home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64
+Intel(R) Optimized LINPACK Benchmark data
+
+Current date/time: Thu Mar  9 22:53:43 2023
+
+CPU frequency:    3.191 GHz
+Number of CPUs: 8
+Number of cores: 8
+Number of threads: 4
+
+Parameters are set to:
+
+Number of tests: 1
+Number of equations to solve (problem size) : 14000
+Leading dimension of array                  : 14000
+Number of trials to run                     : 1    
+Data alignment value (in Kbytes)            : 4    
+
+Maximum memory requested that can be used=1568284096, at the size=14000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+14000  14000  4      30.188     60.6104  2.164203e-10 3.908321e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+14000  14000  4       60.6104  60.6104 
+
+Residual checks PASSED
+
+End of tests
+
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64"
+	User time (seconds): 73.97
+	System time (seconds): 68.56
+	Percent of CPU this job got: 392%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1321880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 879397
+	Minor (reclaiming a frame) page faults: 4673721
+	Voluntary context switches: 49812
+	Involuntary context switches: 4952
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 36.35691165924072 
+
+Major Page Faults,System Time,User Time,Wall Time
+879397,68.56,73.97,36.35
+Setting linpack0 memory limit to 90% (1440M) of max
+echo $$ > /cgroup2/benchmarks/linpack0/cgroup.procs && KMP_AFFINITY=nowarnings,compact,1,0,granularity=fine MKL_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_DOMAIN_NUM_THREADS=4 exec taskset -c 0,1,2,3 /usr/bin/time -v /home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64
+Intel(R) Optimized LINPACK Benchmark data
+
+Current date/time: Thu Mar  9 22:54:20 2023
+
+CPU frequency:    3.862 GHz
+Number of CPUs: 8
+Number of cores: 8
+Number of threads: 4
+
+Parameters are set to:
+
+Number of tests: 1
+Number of equations to solve (problem size) : 14000
+Leading dimension of array                  : 14000
+Number of trials to run                     : 1    
+Data alignment value (in Kbytes)            : 4    
+
+Maximum memory requested that can be used=1568284096, at the size=14000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+14000  14000  4      21.757     84.0997  2.164203e-10 3.908321e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+14000  14000  4       84.0997  84.0997 
+
+Residual checks PASSED
+
+End of tests
+
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64"
+	User time (seconds): 73.44
+	System time (seconds): 34.25
+	Percent of CPU this job got: 387%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:27.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1485548
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 523407
+	Minor (reclaiming a frame) page faults: 2514404
+	Voluntary context switches: 29574
+	Involuntary context switches: 2872
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 27.792792081832886 
+
+Major Page Faults,System Time,User Time,Wall Time
+523407,34.25,73.44,27.76
+Setting linpack0 memory limit to 100% (1600M) of max
+echo $$ > /cgroup2/benchmarks/linpack0/cgroup.procs && KMP_AFFINITY=nowarnings,compact,1,0,granularity=fine MKL_NUM_THREADS=4 OMP_NUM_THREADS=4 MKL_DOMAIN_NUM_THREADS=4 exec taskset -c 0,1,2,3 /usr/bin/time -v /home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64
+Intel(R) Optimized LINPACK Benchmark data
+
+Current date/time: Thu Mar  9 22:54:48 2023
+
+CPU frequency:    3.867 GHz
+Number of CPUs: 8
+Number of cores: 8
+Number of threads: 4
+
+Parameters are set to:
+
+Number of tests: 1
+Number of equations to solve (problem size) : 14000
+Leading dimension of array                  : 14000
+Number of trials to run                     : 1    
+Data alignment value (in Kbytes)            : 4    
+
+Maximum memory requested that can be used=1568284096, at the size=14000
+
+=================== Timing linear equation system solver ===================
+
+Size   LDA    Align. Time(s)    GFlops   Residual     Residual(norm) Check
+14000  14000  4      13.183     138.7988 2.164203e-10 3.908321e-02   pass
+
+Performance Summary (GFlops)
+
+Size   LDA    Align.  Average  Maximal
+14000  14000  4       138.7988 138.7988
+
+Residual checks PASSED
+
+End of tests
+
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/linpack/xlinpack_xeon64 /home/yanghanzhang/cfm/linpack/lininput_xeon64"
+	User time (seconds): 65.65
+	System time (seconds): 1.45
+	Percent of CPU this job got: 384%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.46
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1618192
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2252
+	Voluntary context switches: 38
+	Involuntary context switches: 163
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 17.487709999084473 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,1.45,65.65,17.46
+Setting quicksort0 memory limit to 50% (4125M) of max
+echo $$ > /cgroup2/benchmarks/quicksort0/cgroup.procs && exec taskset -c 0 /usr/bin/time -v /home/yanghanzhang/cfm/quicksort/quicksort 8192
+will sort 2147483648 integers (8192 MB)
+time 282914 ms
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/quicksort/quicksort 8192"
+	User time (seconds): 257.67
+	System time (seconds): 52.94
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:12.85
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 4227408
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1703568
+	Minor (reclaiming a frame) page faults: 12321693
+	Voluntary context switches: 98018
+	Involuntary context switches: 10863
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 312.8770887851715 
+
+Major Page Faults,System Time,User Time,Wall Time
+1703568,52.94,257.67,312.85
+Setting quicksort0 memory limit to 60% (4950M) of max
+echo $$ > /cgroup2/benchmarks/quicksort0/cgroup.procs && exec taskset -c 0 /usr/bin/time -v /home/yanghanzhang/cfm/quicksort/quicksort 8192
+will sort 2147483648 integers (8192 MB)
+time 273300 ms
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/quicksort/quicksort 8192"
+	User time (seconds): 257.00
+	System time (seconds): 43.76
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:02.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5071048
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1067663
+	Minor (reclaiming a frame) page faults: 11654509
+	Voluntary context switches: 98178
+	Involuntary context switches: 9098
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 302.46055936813354 
+
+Major Page Faults,System Time,User Time,Wall Time
+1067663,43.76,257.0,302.43
+Setting quicksort0 memory limit to 70% (5775M) of max
+echo $$ > /cgroup2/benchmarks/quicksort0/cgroup.procs && exec taskset -c 0 /usr/bin/time -v /home/yanghanzhang/cfm/quicksort/quicksort 8192
+will sort 2147483648 integers (8192 MB)
+time 261971 ms
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/quicksort/quicksort 8192"
+	User time (seconds): 253.12
+	System time (seconds): 34.35
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:49.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5913908
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1148720
+	Minor (reclaiming a frame) page faults: 8367800
+	Voluntary context switches: 135647
+	Involuntary context switches: 6508
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 289.36633253097534 
+
+Major Page Faults,System Time,User Time,Wall Time
+1148720,34.35,253.12,289.34
+Setting quicksort0 memory limit to 80% (6600M) of max
+echo $$ > /cgroup2/benchmarks/quicksort0/cgroup.procs && exec taskset -c 0 /usr/bin/time -v /home/yanghanzhang/cfm/quicksort/quicksort 8192
+will sort 2147483648 integers (8192 MB)
+time 253085 ms
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/quicksort/quicksort 8192"
+	User time (seconds): 256.26
+	System time (seconds): 20.57
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:37.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 6756336
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1224099
+	Minor (reclaiming a frame) page faults: 8284606
+	Voluntary context switches: 31735
+	Involuntary context switches: 5294
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 277.4594581127167 
+
+Major Page Faults,System Time,User Time,Wall Time
+1224099,20.57,256.26,277.43
+Setting quicksort0 memory limit to 90% (7425M) of max
+echo $$ > /cgroup2/benchmarks/quicksort0/cgroup.procs && exec taskset -c 0 /usr/bin/time -v /home/yanghanzhang/cfm/quicksort/quicksort 8192
+will sort 2147483648 integers (8192 MB)
+time 254842 ms
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/quicksort/quicksort 8192"
+	User time (seconds): 256.61
+	System time (seconds): 22.28
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:39.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7600252
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 835132
+	Minor (reclaiming a frame) page faults: 8175953
+	Voluntary context switches: 17695
+	Involuntary context switches: 4998
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 279.25480246543884 
+
+Major Page Faults,System Time,User Time,Wall Time
+835132,22.28,256.61,279.22
+Setting quicksort0 memory limit to 100% (8250M) of max
+echo $$ > /cgroup2/benchmarks/quicksort0/cgroup.procs && exec taskset -c 0 /usr/bin/time -v /home/yanghanzhang/cfm/quicksort/quicksort 8192
+will sort 2147483648 integers (8192 MB)
+time 233918 ms
+ 
+
+	Command being timed: "/home/yanghanzhang/cfm/quicksort/quicksort 8192"
+	User time (seconds): 249.40
+	System time (seconds): 1.68
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:11.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 8391532
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4731
+	Voluntary context switches: 1
+	Involuntary context switches: 327
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 251.12514734268188 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,1.68,249.4,251.1
+Setting tf-inception0 memory limit to 10% (212M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 6.6 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 6.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 6.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 6.91
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:23:40.018602: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:23:40.024233: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:23:40.024480: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x46c2fc0 executing computations on platform Host. Devices:
+2023-03-09 23:23:40.024504: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:23:40.036520 139794424817408 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:23:40.232169 139794424817408 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:23:40.487866 139794424817408 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:23:42.284675 139794424817408 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:23:42.525491 139794424817408 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:23:43.216991: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:23:43.656383 139794424817408 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:23:43.951738 139794424817408 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 253.19
+	System time (seconds): 108.59
+	Percent of CPU this job got: 189%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:11.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 335456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1794828
+	Minor (reclaiming a frame) page faults: 12640561
+	Voluntary context switches: 522081
+	Involuntary context switches: 19272
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 191.16946578025818 
+
+Major Page Faults,System Time,User Time,Wall Time
+1794828,108.59,253.19,191.14
+Setting tf-inception0 memory limit to 20% (424M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 8.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.5 +/- 0.1 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 9.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.55
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:26:51.262625: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:26:51.268522: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:26:51.268768: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4201f80 executing computations on platform Host. Devices:
+2023-03-09 23:26:51.268790: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:26:51.280444 139787698669312 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:26:51.474986 139787698669312 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:26:51.729721 139787698669312 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:26:53.530986 139787698669312 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:26:53.769709 139787698669312 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:26:54.439293: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:26:54.826137 139787698669312 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:26:55.072602 139787698669312 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 243.51
+	System time (seconds): 23.99
+	Percent of CPU this job got: 191%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:19.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 550600
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 210227
+	Minor (reclaiming a frame) page faults: 1871841
+	Voluntary context switches: 148549
+	Involuntary context switches: 6540
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 139.91239070892334 
+
+Major Page Faults,System Time,User Time,Wall Time
+210227,23.99,243.51,139.88
+Setting tf-inception0 memory limit to 30% (636M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.6 +/- 0.1 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 9.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.66
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:29:11.363828: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:29:11.369470: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:29:11.369729: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x49322b0 executing computations on platform Host. Devices:
+2023-03-09 23:29:11.369748: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:29:11.382871 139941347444480 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:29:11.576040 139941347444480 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:29:11.855577 139941347444480 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:29:13.666159 139941347444480 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:29:13.934245 139941347444480 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:29:14.645501: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:29:15.033357 139941347444480 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:29:15.286330 139941347444480 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 242.94
+	System time (seconds): 22.21
+	Percent of CPU this job got: 191%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:18.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 772248
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 101654
+	Minor (reclaiming a frame) page faults: 1346776
+	Voluntary context switches: 77656
+	Involuntary context switches: 5298
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 138.35405349731445 
+
+Major Page Faults,System Time,User Time,Wall Time
+101654,22.21,242.94,138.33
+Setting tf-inception0 memory limit to 40% (848M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.7 +/- 0.1 (jitter = 0.1)	0.000	0.000	0.000
+20	images/sec: 9.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.76
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:31:29.866297: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:31:29.873364: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:31:29.873776: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x37bf2b0 executing computations on platform Host. Devices:
+2023-03-09 23:31:29.873806: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:31:29.886418 140182504822528 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:31:30.081107 140182504822528 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:31:30.354662 140182504822528 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:31:32.143064 140182504822528 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:31:32.410344 140182504822528 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:31:33.122150: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:31:33.521992 140182504822528 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:31:33.775606 140182504822528 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 241.15
+	System time (seconds): 21.22
+	Percent of CPU this job got: 191%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:16.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 982588
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 14770
+	Minor (reclaiming a frame) page faults: 1023853
+	Voluntary context switches: 9576
+	Involuntary context switches: 3211
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 136.9852864742279 
+
+Major Page Faults,System Time,User Time,Wall Time
+14770,21.22,241.15,136.96
+Setting tf-inception0 memory limit to 50% (1060M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.9 +/- 0.1 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 9.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.89
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:33:46.956879: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:33:46.963176: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:33:46.963524: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4d87fc0 executing computations on platform Host. Devices:
+2023-03-09 23:33:46.963579: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:33:46.975123 140551410816768 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:33:47.166819 140551410816768 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:33:47.437486 140551410816768 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:33:49.231317 140551410816768 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:33:49.497758 140551410816768 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:33:50.197246: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:33:50.585083 140551410816768 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:33:50.840965 140551410816768 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 241.49
+	System time (seconds): 19.42
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.08
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1061672
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 822154
+	Voluntary context switches: 8533
+	Involuntary context switches: 3285
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 135.11242604255676 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,19.42,241.49,135.08
+Setting tf-inception0 memory limit to 60% (1272M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 9.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.84
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:36:02.189146: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:36:02.195761: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:36:02.195949: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3893fc0 executing computations on platform Host. Devices:
+2023-03-09 23:36:02.195973: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:36:02.207795 140232029939456 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:36:02.401654 140232029939456 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:36:02.675160 140232029939456 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:36:04.524289 140232029939456 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:36:04.794876 140232029939456 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:36:05.511219: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:36:05.900474 140232029939456 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:36:06.163904 140232029939456 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 241.36
+	System time (seconds): 20.28
+	Percent of CPU this job got: 192%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.82
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1061352
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 884741
+	Voluntary context switches: 8626
+	Involuntary context switches: 3487
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 135.8456747531891 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,20.28,241.36,135.82
+Setting tf-inception0 memory limit to 70% (1484M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.9 +/- 0.1 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 9.8 +/- 0.0 (jitter = 0.1)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.84
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:38:18.179229: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:38:18.185429: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:38:18.185571: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x33ef020 executing computations on platform Host. Devices:
+2023-03-09 23:38:18.185579: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:38:18.198262 140490982811392 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:38:18.396523 140490982811392 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:38:18.673192 140490982811392 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:38:20.488749 140490982811392 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:38:20.757520 140490982811392 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:38:21.480489: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:38:21.892123 140490982811392 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:38:22.150086 140490982811392 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 241.98
+	System time (seconds): 19.95
+	Percent of CPU this job got: 192%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.85
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1061104
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 914142
+	Voluntary context switches: 8579
+	Involuntary context switches: 3122
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 135.88201379776 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,19.95,241.98,135.85
+Setting tf-inception0 memory limit to 80% (1696M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 9.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.86
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:40:34.187744: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:40:34.193571: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:40:34.193820: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4d642b0 executing computations on platform Host. Devices:
+2023-03-09 23:40:34.193845: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:40:34.206565 140238703265536 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:40:34.401028 140238703265536 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:40:34.675486 140238703265536 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:40:36.502152 140238703265536 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:40:36.775963 140238703265536 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:40:37.491819: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:40:37.915387 140238703265536 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:40:38.172564 140238703265536 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 241.51
+	System time (seconds): 20.03
+	Percent of CPU this job got: 192%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1069904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 937941
+	Voluntary context switches: 8446
+	Involuntary context switches: 3230
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 135.7399938106537 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,20.03,241.51,135.71
+Setting tf-inception0 memory limit to 90% (1908M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 9.8 +/- 0.0 (jitter = 0.1)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.82
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:42:50.007663: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:42:50.011901: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:42:50.012427: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x50e2fc0 executing computations on platform Host. Devices:
+2023-03-09 23:42:50.012442: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:42:50.024052 140069777196800 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:42:50.218015 140069777196800 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:42:50.473031 140069777196800 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:42:52.262223 140069777196800 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:42:52.501412 140069777196800 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:42:53.169174: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:42:53.566952 140069777196800 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:42:53.812516 140069777196800 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 241.92
+	System time (seconds): 19.47
+	Percent of CPU this job got: 192%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1054956
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 889995
+	Voluntary context switches: 8685
+	Involuntary context switches: 3772
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 135.87051558494568 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,19.47,241.92,135.84
+Setting tf-inception0 memory limit to 100% (2120M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-inception0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       inception3
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 9.8 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+20	images/sec: 9.9 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.016
+----------------------------------------------------------------
+total images/sec: 9.87
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:45:05.985241: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:45:05.990325: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:45:05.990641: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4949fc0 executing computations on platform Host. Devices:
+2023-03-09 23:45:05.990698: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:45:06.002402 139736135767808 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:45:06.197462 139736135767808 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+W0309 23:45:06.452873 139736135767808 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: average_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.AveragePooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:45:08.249757 139736135767808 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:45:08.494045 139736135767808 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:45:09.162451: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:45:09.543256 139736135767808 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:45:09.795714 139736135767808 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=inception3 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 241.20
+	System time (seconds): 19.68
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:15.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1061464
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 853255
+	Voluntary context switches: 8624
+	Involuntary context switches: 3726
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 135.13230347633362 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,19.68,241.2,135.1
+Setting tf-resnet0 memory limit to 10% (127M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 5.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 5.5 +/- 0.0 (jitter = 0.0)	0.000	0.016	0.016
+20	images/sec: 5.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 5.45
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:47:21.295660: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:47:21.302149: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:47:21.302613: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x443a220 executing computations on platform Host. Devices:
+2023-03-09 23:47:21.302639: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:47:21.315407 140408461244160 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:47:21.477071 140408461244160 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:47:23.002572 140408461244160 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:47:23.134108 140408461244160 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:47:23.665350: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:47:24.117466 140408461244160 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:47:24.314215 140408461244160 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 194.57
+	System time (seconds): 257.13
+	Percent of CPU this job got: 188%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:59.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 251728
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4219568
+	Minor (reclaiming a frame) page faults: 27898314
+	Voluntary context switches: 1105262
+	Involuntary context switches: 40841
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 239.90238642692566 
+
+Major Page Faults,System Time,User Time,Wall Time
+4219568,257.13,194.57,239.88
+Setting tf-resnet0 memory limit to 20% (254M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 8.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 8.3 +/- 0.0 (jitter = 0.0)	0.000	0.016	0.016
+20	images/sec: 8.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 8.34
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:51:21.368409: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:51:21.374364: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:51:21.375523: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4a20220 executing computations on platform Host. Devices:
+2023-03-09 23:51:21.375551: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:51:21.388535 139735711713024 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:51:21.549658 139735711713024 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:51:23.021131 139735711713024 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:51:23.148037 139735711713024 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:51:23.622137: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:51:24.057569 139735711713024 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:51:24.237990 139735711713024 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 188.55
+	System time (seconds): 111.02
+	Percent of CPU this job got: 189%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:38.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 380272
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1494570
+	Minor (reclaiming a frame) page faults: 11250026
+	Voluntary context switches: 370618
+	Involuntary context switches: 19360
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 158.2611997127533 
+
+Major Page Faults,System Time,User Time,Wall Time
+1494570,111.02,188.55,158.23
+Setting tf-resnet0 memory limit to 30% (380M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 9.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 10.3 +/- 0.1 (jitter = 0.2)	0.000	0.016	0.016
+20	images/sec: 10.4 +/- 0.1 (jitter = 0.3)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 10.42
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:53:59.673010: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:53:59.678205: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:53:59.678527: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4d6a220 executing computations on platform Host. Devices:
+2023-03-09 23:53:59.678581: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:53:59.691590 140604862781184 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:53:59.852541 140604862781184 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:54:01.269417 140604862781184 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:54:01.396867 140604862781184 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:54:01.848034: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:54:02.222635 140604862781184 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:54:02.364548 140604862781184 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 184.28
+	System time (seconds): 58.40
+	Percent of CPU this job got: 190%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:07.24
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 508324
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 672997
+	Minor (reclaiming a frame) page faults: 6262602
+	Voluntary context switches: 240602
+	Involuntary context switches: 9814
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 127.26462626457214 
+
+Major Page Faults,System Time,User Time,Wall Time
+672997,58.4,184.28,127.24
+Setting tf-resnet0 memory limit to 40% (507M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 11.7 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 12.3 +/- 0.1 (jitter = 0.1)	0.000	0.016	0.016
+20	images/sec: 12.3 +/- 0.0 (jitter = 0.1)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 12.31
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:56:07.063399: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:56:07.068342: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:56:07.068459: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3f51220 executing computations on platform Host. Devices:
+2023-03-09 23:56:07.068470: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:56:07.081527 139891156420352 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:56:07.243393 139891156420352 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:56:08.671643 139891156420352 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:56:08.799518 139891156420352 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:56:09.250599: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:56:09.663644 139891156420352 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:56:09.809729 139891156420352 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 185.87
+	System time (seconds): 21.75
+	Percent of CPU this job got: 191%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:48.39
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 638920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 167172
+	Minor (reclaiming a frame) page faults: 1204578
+	Voluntary context switches: 146623
+	Involuntary context switches: 5618
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 108.41503167152405 
+
+Major Page Faults,System Time,User Time,Wall Time
+167172,21.75,185.87,108.39
+Setting tf-resnet0 memory limit to 50% (634M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 12.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 12.8 +/- 0.1 (jitter = 0.1)	0.000	0.016	0.016
+20	images/sec: 12.9 +/- 0.0 (jitter = 0.1)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 12.86
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:57:55.648199: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:57:55.654631: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:57:55.655012: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x3ad50c0 executing computations on platform Host. Devices:
+2023-03-09 23:57:55.655056: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:57:55.668618 139937263494912 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:57:55.834553 139937263494912 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:57:57.306155 139937263494912 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:57:57.430253 139937263494912 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:57:57.902117: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:57:58.278906 139937263494912 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:57:58.424793 139937263494912 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 184.79
+	System time (seconds): 16.16
+	Percent of CPU this job got: 192%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:44.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 770596
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 55835
+	Minor (reclaiming a frame) page faults: 589480
+	Voluntary context switches: 37384
+	Involuntary context switches: 2850
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 104.16805934906006 
+
+Major Page Faults,System Time,User Time,Wall Time
+55835,16.16,184.79,104.15
+Setting tf-resnet0 memory limit to 60% (761M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 12.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 13.0 +/- 0.1 (jitter = 0.1)	0.000	0.016	0.016
+20	images/sec: 13.0 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 13.03
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-09 23:59:39.887542: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-09 23:59:39.892570: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-09 23:59:39.892817: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x40d9fb0 executing computations on platform Host. Devices:
+2023-03-09 23:59:39.892844: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0309 23:59:39.905013 140083177092864 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0309 23:59:40.065882 140083177092864 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0309 23:59:41.481837 140083177092864 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0309 23:59:41.607887 140083177092864 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-09 23:59:42.051368: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0309 23:59:42.420188 140083177092864 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0309 23:59:42.570115 140083177092864 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 183.99
+	System time (seconds): 14.45
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:42.50
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 896176
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 13128
+	Minor (reclaiming a frame) page faults: 385496
+	Voluntary context switches: 6687
+	Involuntary context switches: 2253
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 102.52979302406311 
+
+Major Page Faults,System Time,User Time,Wall Time
+13128,14.45,183.99,102.5
+Setting tf-resnet0 memory limit to 70% (888M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 12.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 13.0 +/- 0.1 (jitter = 0.0)	0.000	0.016	0.016
+20	images/sec: 13.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 13.08
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-10 00:01:22.618840: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-10 00:01:22.625347: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-10 00:01:22.625709: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4556220 executing computations on platform Host. Devices:
+2023-03-10 00:01:22.625769: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0310 00:01:22.639453 139634084173568 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0310 00:01:22.800736 139634084173568 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0310 00:01:24.324374 139634084173568 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0310 00:01:24.457165 139634084173568 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-10 00:01:24.946824: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0310 00:01:25.320502 139634084173568 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0310 00:01:25.472727 139634084173568 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 184.65
+	System time (seconds): 13.49
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:42.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 969484
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 361817
+	Voluntary context switches: 5963
+	Involuntary context switches: 2752
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 102.47115325927734 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,13.49,184.65,102.44
+Setting tf-resnet0 memory limit to 80% (1014M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 12.5 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 13.0 +/- 0.1 (jitter = 0.1)	0.000	0.016	0.016
+20	images/sec: 13.0 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 13.01
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-10 00:03:05.136889: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-10 00:03:05.141120: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-10 00:03:05.141222: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4081220 executing computations on platform Host. Devices:
+2023-03-10 00:03:05.141230: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0310 00:03:05.154088 139953498113792 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0310 00:03:05.314866 139953498113792 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0310 00:03:06.725247 139953498113792 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0310 00:03:06.849652 139953498113792 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-10 00:03:07.292703: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0310 00:03:07.701548 139953498113792 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0310 00:03:07.841003 139953498113792 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 184.23
+	System time (seconds): 14.34
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:42.58
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 970936
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 359908
+	Voluntary context switches: 6114
+	Involuntary context switches: 2652
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 102.60799503326416 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,14.34,184.23,102.58
+Setting tf-resnet0 memory limit to 90% (1141M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 12.4 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 13.0 +/- 0.1 (jitter = 0.1)	0.000	0.016	0.016
+20	images/sec: 13.1 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 13.05
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-10 00:04:47.935131: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-10 00:04:47.940852: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-10 00:04:47.941214: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4d49220 executing computations on platform Host. Devices:
+2023-03-10 00:04:47.941267: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0310 00:04:47.955049 140083280561920 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0310 00:04:48.115694 140083280561920 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0310 00:04:49.578115 140083280561920 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0310 00:04:49.705003 140083280561920 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-10 00:04:50.173595: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0310 00:04:50.547473 140083280561920 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0310 00:04:50.704398 140083280561920 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 184.02
+	System time (seconds): 14.05
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:42.51
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 971228
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 361506
+	Voluntary context switches: 5993
+	Involuntary context switches: 2420
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 102.54011225700378 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,14.05,184.02,102.51
+Setting tf-resnet0 memory limit to 100% (1268M) of max
+cd /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks && echo $$ > /cgroup2/benchmarks/tf-resnet0/cgroup.procs && KMP_AFFINITY=granularity=fine,verbose,compact,1,0 KMP_BLOCK_TIME=0 KMP_SETTINGS=1 OMP_NUM_THREADS=2 exec taskset -c 0,1 /usr/bin/time -v python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0
+TensorFlow:  1.14
+Model:       resnet50
+Dataset:     imagenet (synthetic)
+Mode:        forward only
+SingleSess:  False
+Batch size:  64 global
+             64 per device
+Num batches: 20
+Num epochs:  0.00
+Devices:     ['/cpu:0']
+NUMA bind:   False
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating training model
+Initializing graph
+Running warm up
+Done warm up
+Step	Img/sec	total_loss	top_1_accuracy	top_5_accuracy
+1	images/sec: 12.3 +/- 0.0 (jitter = 0.0)	0.000	0.000	0.000
+10	images/sec: 12.9 +/- 0.1 (jitter = 0.1)	0.000	0.016	0.016
+20	images/sec: 13.0 +/- 0.0 (jitter = 0.1)	0.000	0.000	0.000
+----------------------------------------------------------------
+total images/sec: 12.98
+----------------------------------------------------------------
+ 
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:61: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2023-03-10 00:06:30.536658: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2023-03-10 00:06:30.541356: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2294605000 Hz
+2023-03-10 00:06:30.541674: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4b02220 executing computations on platform Host. Devices:
+2023-03-10 00:06:30.541731: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W0310 00:06:30.554407 139857667970816 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:134: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+W0310 00:06:30.715527 139857667970816 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/convnet_builder.py:266: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+WARNING:tensorflow:From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+W0310 00:06:32.139188 139857667970816 deprecation.py:323] From /home/yanghanzhang/cfm/tensorflow/benchmarks/scripts/tf_cnn_benchmarks/benchmark_cnn.py:2267: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0310 00:06:32.265857 139857667970816 deprecation.py:323] From /usr/local/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py:1354: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2023-03-10 00:06:32.718423: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+INFO:tensorflow:Running local_init_op.
+I0310 00:06:33.138580 139857667970816 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0310 00:06:33.277609 139857667970816 session_manager.py:502] Done running local_init_op.
+	Command being timed: "python3 tf_cnn_benchmarks.py --forward_only=True --data_format=NHWC --device=cpu --batch_size=64 --num_inter_threads=1 --num_intra_threads=2 --nodistortions --model=resnet50 --kmp_blocktime=0 --num_batches=20 --num_warmup_batches 0"
+	User time (seconds): 184.94
+	System time (seconds): 14.11
+	Percent of CPU this job got: 193%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:42.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 971324
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 359921
+	Voluntary context switches: 6079
+	Involuntary context switches: 2236
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+ 
+
+Python Wall Time: 102.89740943908691 
+
+Major Page Faults,System Time,User Time,Wall Time
+0,14.11,184.94,102.87
