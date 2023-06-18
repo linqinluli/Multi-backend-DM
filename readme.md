@@ -14,21 +14,25 @@ res：处理过后的数据，包含部分实验图
 
 其中部分workload可以参考[CFM](https://github.com/clusterfarmem/cfm)进行配置，具体配置后续会单独补上
 
-| type           | name            | state |
-|:--------------:|:---------------:|:-----:|
-| C++            | quicksort       | √     |
-|                | linpack         | √     |
-| Spark          | PageRank        | √     |
-| GridGraph      | PreProcess      | √     |
-|                | BFS             | √     |
-| Python         | kmeans          | √     |
-| tensorflow     | inception       | √     |
-|                | resnet          | √     |
-| File operation | file read/write |       |
-| PostgreSQL     | TPCH            |       |
-|                | TPCDS           |       |
-|                | TPCC            |       |
-|                | Sysbench        |       |
+| type           | name            | state |                                            |
+|:--------------:|:---------------:|:-----:| ------------------------------------------ |
+| C/C++          | quicksort       | √     |                                            |
+|                | linpack         | √     |                                            |
+|                | stream          | √     |                                            |
+| Spark          | PageRank        | √     |                                            |
+| GridGraph      | PreProcess      | √     |                                            |
+|                | BFS             | √     |                                            |
+|                | PageRank        | √     |                                            |
+|                | spmv            | √     |                                            |
+|                | wcc             |       | 运行时间较长，不考虑加入                               |
+| Python         | kmeans          | √     | local memory较小时程序崩溃                        |
+| tensorflow     | inception       | √     |                                            |
+|                | resnet          | √     |                                            |
+| File operation | file read/write |       | 未设置单独程序（没必要），GridGraph中PreProcess代替了读写性能测量 |
+| PostgreSQL     | TPCH            |       |                                            |
+|                | TPCDS           |       |                                            |
+|                | TPCC            |       |                                            |
+|                | Sysbench        |       |                                            |
 
 ### 2. 实验数据
 
