@@ -22,9 +22,10 @@ res：处理过后的数据，包含部分实验图
 | Spark          | PageRank        | √     |                                            |
 | GridGraph      | PreProcess      | √     |                                            |
 |                | BFS             | √     |                                            |
+| Ligra          | BFS             | √     |                                            |
+|                | BC              | √     |                                            |
+|                | CF              | √     |                                            |
 |                | PageRank        | √     |                                            |
-|                | spmv            | √     |                                            |
-|                | wcc             |       | 运行时间较长，不考虑加入                               |
 | Python         | kmeans          | √     | local memory较小时程序崩溃                        |
 | tensorflow     | inception       | √     |                                            |
 |                | resnet          | √     |                                            |
@@ -82,6 +83,11 @@ sudo sh -c "echo always > /sys/kernel/mm/transparent_hugepage/enabled"
 #### 修改CPU个数
 
 直接在virt-manager中修改
+
+```shell
+# 查看CPU个数
+cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
+```
 
 #### 激活RDMA VF网卡并设置IP
 
