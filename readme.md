@@ -45,11 +45,12 @@ res：处理过后的数据，包含部分实验图
 
 由于该项目目前需要分配给多个人同时进行，将任务和虚拟机分配如下(虚拟机运行在实验室服务器SAIL-N2上)：
 
-| 任务描述           | 虚拟机名字       | 负责人  | IP              | 账号           | 密码           |
-|:--------------:|:-----------:|:----:|:---------------:|:------------:|:------------:|
-| 主要实验           | cgroup2test | 杨涵章  | 192.168.122.143 | yanghanzhang | yanghanzhang |
-| Fastswap配置探索   | FastswapExp | 王菎运  | 192.168.122.9   | yanghanzhang | yanghanzhang |
-| PostgreSQL配置探索 | PostgreSQL  | 颛孙一鸣 | 192.168.122.94  | yanghanzhang | yanghanzhang |
+| 任务描述         | 虚拟机名字               | 负责人 | IP              | 账号           | 密码           |
+|:------------:|:-------------------:|:---:|:---------------:|:------------:|:------------:|
+| 主要实验         | cgroup2test         | 杨涵章 | 192.168.122.143 | yanghanzhang | yanghanzhang |
+| F/A page测量   | exp-fine-clone-zsym | 杨俊龙 | 192.168.122.44  | yanghanzhang | yanghanzhang |
+| PostgreSQL实验 | PostgreSQLExp       | 程子枞 | 192.168.122.212 | yanghanzhang | yanghanzhang |
+| Cache实验      | CacheExp            | 徐雨梦 | 192.168.122.94  | yanghanzhang | yanghanzhang |
 
 ### 2. 如何开始实验？
 
@@ -62,6 +63,42 @@ c. 主要和workload有关的实验在cfm文件夹中，可以参考[CFM](https:
 d. 运行试验记得使用linux中的">> /log/xxx.log"命令将结果存储到log文件中，之后使用code中的log处理文件进行处理
 
 ### 3. 一些常见的指令
+
+#### 虚拟机命令行控制
+
+可以通过virsh指令控制虚拟机
+
+显示当前运行的虚拟机
+
+```shell
+sudo virsh list
+```
+
+关闭虚拟机
+
+```shell
+sudo virsh shutdown CacheExp
+```
+
+强制关闭虚拟机
+
+```shell
+sudo virsh destory CacheExp
+```
+
+开启虚拟机
+
+```shell
+sudo virsh start CacheExp
+```
+
+编辑虚拟机配置
+
+```shell
+sudo virsh edit CacheExp
+```
+
+
 
 #### 脚本运行
 
@@ -94,7 +131,7 @@ cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
 每次重启系统，并且需要使用RDMA backend的时候需要设置RDMA VF网卡对应的IP
 
 ```shell
-sudo ifconfig ens9 20.20.20.143 up
+sudo ifconfig ens9 20.20.20.94 up
 ```
 
 #### Fastswap安装
@@ -109,7 +146,7 @@ sudo insmod fastswap.ko
 nohup ./fastswap/farmemserver/rmserver 50000 8 &
 
 # 然后再client端安装fastswap kernel
-sudo insmod fastswap_rdma.ko sport=50000 sip="20.20.20.110" cip="20.20.20.143" nq=8
+sudo insmod fastswap_rdma.ko sport=50001 sip="20.20.20.110" cip="20.20.20.94" nq=32
 sudo insmod fastswap.ko
 
 
