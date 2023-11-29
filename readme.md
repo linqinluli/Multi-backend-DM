@@ -1,98 +1,150 @@
 # DMSwitcher
 
-code：存放实验代码，包括log处理，更新workload之后的eval文件
+code：Experiment code, include the workload code and log process code. 
 
-document：配置并行远内存系统的文件和部分学习笔记
+document：Include documents about how to confige our system.
 
-log：实验结果的log
+## workload support
 
-res：处理过后的数据，包含部分实验图
+### workload list
 
-## 实验进度
+| type           | name            | state |                                                     |
+|:--------------:|:---------------:|:-----:| --------------------------------------------------- |
+| C/C++          | quicksort       | √     |                                                     |
+|                | linpack         | √     |                                                     |
+|                | stream          | √     |                                                     |
+| Spark          | PageRank        | √     |                                                     |
+| GridGraph      | PreProcess      | √     |                                                     |
+|                | BFS             | √     |                                                     |
+| Ligra          | BFS             | √     |                                                     |
+|                | BC              | √     |                                                     |
+|                | CF              | √     |                                                     |
+|                | PageRank        | √     |                                                     |
+| Python         | kmeans          | √     | when local mremory ratio is low, program will crash |
+| tensorflow     | inception       | √     |                                                     |
+|                | resnet          | √     |                                                     |
+| File operation | file read/write | √     | PreProcess in GridGraph                             |
+| PostgreSQL     | TPCH            | √     | Small memory usage with huge page cache             |
+|                | TPCDS           | √     | Small memory usage with huge page cache             |
+|                | TPCC            | √     | Small memory usage with huge page cache             |
+|                | Sysbench        | √     | Small memory usage with huge page cache             |
+| AI             | chatglm         | √     |                                                     |
+|                | chatglm-int4    | √     |                                                     |
+|                | clip            | √     |                                                     |
+|                | text-classify   | √     |                                                     |
+|                | bert-uncased    | √     |                                                     |
 
-### 1. workload进度
+### workload configuration
 
-其中部分workload可以参考[CFM](https://github.com/clusterfarmem/cfm)进行配置，具体配置后续会单独补上
+Some workloads' configuration can refer to [CFM](https://github.com/clusterfarmem/cfm): quicksort, linpack, stream, pagerank, kmeans, inception, resnet
 
-| type           | name            | state |                                            |
-|:--------------:|:---------------:|:-----:| ------------------------------------------ |
-| C/C++          | quicksort       | √     |                                            |
-|                | linpack         | √     |                                            |
-|                | stream          | √     |                                            |
-| Spark          | PageRank        | √     |                                            |
-| GridGraph      | PreProcess      | √     |                                            |
-|                | BFS             | √     |                                            |
-| Ligra          | BFS             | √     |                                            |
-|                | BC              | √     |                                            |
-|                | CF              | √     |                                            |
-|                | PageRank        | √     |                                            |
-| Python         | kmeans          | √     | local memory较小时程序崩溃                        |
-| tensorflow     | inception       | √     |                                            |
-|                | resnet          | √     |                                            |
-| File operation | file read/write |       | 未设置单独程序（没必要），GridGraph中PreProcess代替了读写性能测量 |
-| PostgreSQL     | TPCH            |       |                                            |
-|                | TPCDS           |       |                                            |
-|                | TPCC            |       |                                            |
-|                | Sysbench        |       |                                            |
+**GridGraph**: refer to [thu-pacman/GridGraph: Out-of-core graph processing on a single machine](https://github.com/thu-pacman/GridGraph)
 
-### 2. 实验数据
+**Ligra**: refer to [jshun/ligra: Ligra: A Lightweight Graph Processing Framework for Shared Memory](https://github.com/jshun/ligra)
 
-实验原始log存储在log文件夹中，处理之后的结果数据存储在[res](/res/res.xlsx)中。
+**chatglm**:
 
-## 实验环境
+**chatglm-int4**:
 
-### 1. 虚拟机分配
+**clip**:
 
-由于该项目目前需要分配给多个人同时进行，将任务和虚拟机分配如下(虚拟机运行在实验室服务器SAIL-N2上)：
+**text-classofy**:
 
-| 任务描述         | 虚拟机名字               | 负责人 | IP              | 账号           | 密码           |
-|:------------:|:-------------------:|:---:|:---------------:|:------------:|:------------:|
-| 主要实验         | cgroup2test         | 杨涵章 | 192.168.122.143 | yanghanzhang | yanghanzhang |
-| F/A page测量   | exp-fine-clone-zsym | 杨俊龙 | 192.168.122.44  | yanghanzhang | yanghanzhang |
-| PostgreSQL实验 | PostgreSQLExp       | 程子枞 | 192.168.122.212 | yanghanzhang | yanghanzhang |
-| Cache实验      | CacheExp            | 徐雨梦 | 192.168.122.94  | yanghanzhang | yanghanzhang |
+**bet-uncased**:
 
-### 2. 如何开始实验？
+## System configuration
 
-a. 首先通过ssh连接n2服务器，虚拟机的管理通过virt-manager完成，有关服务运行在linqinluli这个用户的账号上，有需要找杨涵章要账号密码或者让他帮忙完成；
+### Set up basic configuration
 
-b. 然后通过ssh连接对应虚拟机；
+1. Install qemu-kvm
 
-c. 主要和workload有关的实验在cfm文件夹中，可以参考[CFM](https://github.com/clusterfarmem/cfm)进行运行，目前在cgroup2test文件完成了除PostgreSQL以外所有workload的配置
+2. Configure rdma in kvm virtual machine, refer to document [kvm-rdma configuration](document/kvm-rdma configuration.md)
 
-d. 运行试验记得使用linux中的">> /log/xxx.log"命令将结果存储到log文件中，之后使用code中的log处理文件进行处理
+3. Configure fastswap in kvm virtual maching, refer to document kvm VM [fastswap configuration](document/kvm VM fastswap configuration.md)
 
-### 3. 一些常见的指令
+4. Basic configuration of our system has been set up, and you can begin to evaluate different workloads with different system configuration.
 
-#### 虚拟机命令行控制
+### System parameters modification
 
-可以通过virsh指令控制虚拟机
+#### a. Backend
 
-显示当前运行的虚拟机
+**Rdma backend**: 
+
+```shell
+# driver installation-dram backend
+cd fastswap/drivers/
+make BACKEND=RDMA
+
+# start fastswap service in far memory server，
+# 50000: port number
+# 8: #channels（the same as #CPUs in far memory client）
+nohup ./fastswap/farmemserver/rmserver 50000 32 &
+
+# instal fastswap module in far memory client
+sudo insmod fastswap_rdma.ko sport=50000 sip="20.20.20.110" cip="20.20.20.94" nq=32
+sudo insmod fastswap.ko
+
+
+```
+
+**Dram backend**: 
+
+```shell
+# driver installation-dram backend
+cd fastswap/drivers/
+make BACKEND=DRAM
+sudo insmod fastswap_dram.ko
+sudo insmod fastswap.ko
+```
+
+**SSD backend**: Use linux defaut swap system and swapfile should be mounted at SSD.
+
+#### b. THP (Transparent Huge Page) on/off
+
+```shell
+# check THP status
+cat /sys/kernel/mm/transparent_hugepage/enabled
+# modify THP status
+sudo sh -c "echo always > /sys/kernel/mm/transparent_hugepage/enabled"
+sudo sh -c "echo never> /sys/kernel/mm/transparent_hugepage/enabled"
+```
+
+#### c. Number of CPUs
+
+```shell
+# modify VM configuration
+sudo virsh edit CacheExp
+# query the number of CPUs
+cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
+```
+
+#### d. VM operations
+
+list running VMs
 
 ```shell
 sudo virsh list
 ```
 
-关闭虚拟机
+shutdown VM-CacheExp
 
 ```shell
 sudo virsh shutdown CacheExp
 ```
 
-强制关闭虚拟机
+force shudown VM-CacheExp
 
 ```shell
 sudo virsh destory CacheExp
 ```
 
-开启虚拟机
+start VM-CacheExp
 
 ```shell
 sudo virsh start CacheExp
 ```
 
-编辑虚拟机配置
+edit VM-CacheExp's configurations
 
 ```shell
 sudo virsh edit CacheExp
@@ -106,50 +158,7 @@ sudo virsh edit CacheExp
 nohup source test.sh >> logs/xxx.log &
 ```
 
-### transparent huge page相关
 
-```shell
-# 查看是否打开THP
-cat /sys/kernel/mm/transparent_hugepage/enabled
-# 修改THP状态
-sudo sh -c "echo always > /sys/kernel/mm/transparent_hugepage/enabled"
-```
-
-#### 修改CPU个数
-
-直接在virt-manager中修改
-
-```shell
-# 查看CPU个数
-cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
-```
-
-#### 激活RDMA VF网卡并设置IP
-
-每次重启系统，并且需要使用RDMA backend的时候需要设置RDMA VF网卡对应的IP
-
-```shell
-sudo ifconfig ens9 20.20.20.94 up
-```
-
-#### Fastswap安装
-
-```shell
-# driver安装-dram backend
-sudo insmod fastswap_dram.ko
-sudo insmod fastswap.ko
-
-# driver安装-rdma backend
-# 首先在server端运行fastswap服务，参数50000表示开启端口，8表示通信channel个数（和client端CPU数对应）
-nohup ./fastswap/farmemserver/rmserver 50000 8 &
-
-# 然后再client端安装fastswap kernel
-sudo insmod fastswap_rdma.ko sport=50001 sip="20.20.20.110" cip="20.20.20.94" nq=32
-sudo insmod fastswap.ko
-
-
-# ssd backend直接使用4.11.0-genertic版本的内核，不需要额外操作
-```
 
 #### 清除系统page buffer/cache的缓存
 
