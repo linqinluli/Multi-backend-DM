@@ -98,8 +98,6 @@ sudo virsh start CacheExp
 sudo virsh edit CacheExp
 ```
 
-
-
 #### 脚本运行
 
 程序运行脚本test.sh，用于运行一轮程序，在里面配置好直接运行即可，注意关掉ssh连接的session之后程序会断掉，所以采用以下指令：

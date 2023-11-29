@@ -15,7 +15,7 @@ class Container:
 
     def delete(self):
         path = self.get_cont_path()
-        ret = utils.shell_exec("rmdir {0}".format(path))[0]
+        ret = utils.shell_exec("rmdir  {0}".format(path))[0]
         if ret:
             raise RuntimeError("Error deleting {}".format(path))
 
@@ -53,6 +53,7 @@ class Container:
         """creates new container as child of CGROUP_PATH"""
         new_cont_path = self.get_cont_path()
         try:
+            print(new_cont_path)
             os.mkdir(new_cont_path)
             assert self.exists()
         except FileExistsError:

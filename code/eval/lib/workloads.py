@@ -36,8 +36,9 @@ class Workload:
         # Container creation
         self.mem_ratio = mem_ratio
         self.container = Container(self.get_name(), self.ideal_mem, self.mem_ratio)
+        print("container create")
         self.container.create()
-        
+        print("container create over")
         # Pin CPUs
         self.pinned_cpus = pinned_cpus
 
@@ -57,11 +58,12 @@ class Workload:
     def __exec(self):
         " execute in self.thread "
         print(self.cmdline)
-
+        print("__exec")
         self.ts_start = time.time()
         self.popen = subprocess.Popen(self.cmdline, stdout=subprocess.PIPE,
                                       stderr=subprocess.PIPE, shell=True)
         self.stdout, self.stderr = self.popen.communicate()  # blocks process exit
+        print(self.popen.returncode)
         assert(self.popen.returncode == 0)
         self.ts_finish = time.time()
 
@@ -150,6 +152,7 @@ class Quicksort(Workload):
     coeff = [-1984.129, 4548.033, -3588.554, 1048.644, 252.997]
 
     def get_cmdline(self, procs_path, pinned_cpus):
+        print(procs_path)
         prefix = "echo $$ > {} &&".format(procs_path)
         arg = '8192'
         shell_cmd = '/usr/bin/time -v' + ' ' + constants.WORK_DIR + '/quicksort/quicksort {}'.format(arg)
@@ -158,9 +161,93 @@ class Quicksort(Workload):
         full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
         return full_command
 
+class Ligra_bfs(Workload):
+    wname = "lg-bfs"
+    ideal_mem = 3630
+    min_ratio = 0.65
+    min_mem = int(min_ratio * ideal_mem)
+    binary_name = "lg-bfs"
+    cpu_req = 1
+    coeff = [-1984.129, 4548.033, -3588.554, 1048.644, 252.997]
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} &&".format(procs_path)
+ 
+        shell_cmd = '/usr/bin/time -v' + ' ' + constants.WORK_DIR + '/ligra/apps/BFS -s /home/yanghanzhang/cfm/ligra/inputs/rMat_10000000'
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+        return full_command
+class Ligra_bc(Workload):
+    wname = "lg-bc"
+    ideal_mem = 4540
+    min_ratio = 0.65
+    min_mem = int(min_ratio * ideal_mem)
+    binary_name = "lg-bc"
+    cpu_req = 1
+    coeff = [-1984.129, 4548.033, -3588.554, 1048.644, 252.997]
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} &&".format(procs_path)
+ 
+        shell_cmd = '/usr/bin/time -v' + ' ' + constants.WORK_DIR + '/ligra/apps/BC /home/yanghanzhang/cfm/ligra/inputs/rMat_10000000'
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+        return full_command
+    
+class Ligra_MIS(Workload):
+    wname = "lg-mis"
+    ideal_mem = 4530
+    min_ratio = 0.65
+    min_mem = int(min_ratio * ideal_mem)
+    binary_name = "lg-mis"
+    cpu_req = 1
+    coeff = [-1984.129, 4548.033, -3588.554, 1048.644, 252.997]
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} &&".format(procs_path)
+ 
+        shell_cmd = '/usr/bin/time -v' + ' ' + constants.WORK_DIR + '/ligra/apps/MIS /home/yanghanzhang/cfm/ligra/inputs/rMat_10000000'
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+        return full_command
+    
+class Ligra_Components(Workload):
+    wname = "lg-Components"
+    ideal_mem = 4530
+    min_ratio = 0.65
+    min_mem = int(min_ratio * ideal_mem)
+    binary_name = "lg-Components"
+    cpu_req = 1
+    coeff = [-1984.129, 4548.033, -3588.554, 1048.644, 252.997]
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} &&".format(procs_path)
+ 
+        shell_cmd = '/usr/bin/time -v' + ' ' + constants.WORK_DIR + '/ligra/apps/Components /home/yanghanzhang/cfm/ligra/inputs/rMat_10000000'
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+        return full_command
+    
+class Ligra_pagerank(Workload):
+    wname = "lg-pagerank"
+    ideal_mem = 4540
+    min_ratio = 0.65
+    min_mem = int(min_ratio * ideal_mem)
+    binary_name = "lg-pagerank"
+    cpu_req = 1
+    coeff = [-1984.129, 4548.033, -3588.554, 1048.644, 252.997]
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} &&".format(procs_path)
+ 
+        shell_cmd = '/usr/bin/time -v' + ' ' + constants.WORK_DIR + '/ligra/apps/PageRank /home/yanghanzhang/cfm/ligra/inputs/rMat_10000000'
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+        return full_command
+
 class BfsExe(Workload):
     wname = "bfs-exe"
-    ideal_mem = 1560
+    ideal_mem = 220
     min_ratio = 0.65
     min_mem = int(min_ratio * ideal_mem)
     binary_name = "bfs-exe"
@@ -177,7 +264,7 @@ class BfsExe(Workload):
 
 class BfsPre(Workload):
     wname = "bfs-pre"
-    ideal_mem = 1100
+    ideal_mem = 600
     min_ratio = 0.65
     min_mem = int(min_ratio * ideal_mem)
     binary_name = "bfs-pre"
@@ -293,7 +380,7 @@ class Tfresnet(Workload):
 class Kmeans(Workload):
     wname = "kmeans"
     ideal_mem = 4847
-    binary_name = "python3"
+    binary_name = "python"
     min_ratio = 0.75
     min_mem = int(min_ratio * ideal_mem)
     cpu_req = 1
@@ -444,6 +531,121 @@ class Stream(Workload):
         full_command = ' '.join((cd_dir, prefix, 'exec', set_cpu, shell_cmd))
         return full_command
 
+class ChatGLM(Workload):
+    wname = "chatglm"
+    ideal_mem = 25352
+    binary_name = "python3"
+    min_ratio = 0.75
+    min_mem = int(min_ratio * ideal_mem)
+    cpu_req = 8
+    coeff = [-10341.875,  31554.403, -34346.894,  15214.428,  -1730.533]
+    # get command line for executive
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} && ".format(procs_path)
+        bin_path = constants.WORK_DIR + '/ChatGLM2-6B/test.py'
+        #python path
+        python_path = constants.WORK_DIR  + '/python/work2/bin/python'
+        shell_cmd = '/usr/bin/time -v' +  '  '+ python_path + ' ' + bin_path
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+
+        return full_command
+
+class ChatGLM_int4(Workload):
+    wname = "chatglm-int4"
+    ideal_mem = 8150
+    binary_name = "python3"
+    min_ratio = 0.75
+    min_mem = int(min_ratio * ideal_mem)
+    cpu_req = 4
+    coeff = [-10341.875,  31554.403, -34346.894,  15214.428,  -1730.533]
+
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} && ".format(procs_path)
+        bin_path = constants.WORK_DIR + '/chatglm2-6b-int4/test.py'
+        #python path
+        
+        python_path = constants.WORK_DIR  + '/python/work2/bin/python'
+        shell_cmd = '/usr/bin/time -v' +  '  '+ python_path + ' ' + bin_path
+        
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+
+        return full_command
+    
+class Clip(Workload):
+    wname = "clip"
+    ideal_mem = 1850
+    binary_name = "python3"
+    min_ratio = 0.75
+    min_mem = int(min_ratio * ideal_mem)
+    cpu_req = 4
+    coeff = [-10341.875,  31554.403, -34346.894,  15214.428,  -1730.533]
+    
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} && ".format(procs_path)
+        bin_path = constants.WORK_DIR + '/clip/test.py'
+        #python path
+        python_path = constants.WORK_DIR  + '/python/work2/bin/python'
+        shell_cmd = '/usr/bin/time -v' +  '  '+ python_path  + ' ' + bin_path
+        
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+
+        return full_command
+    
+class Bert_Based_Uncased(Workload):
+    wname = "bert-uncased"
+    ideal_mem = 1410
+    binary_name = "python3"
+    min_ratio = 0.75
+    min_mem = int(min_ratio * ideal_mem)
+    cpu_req = 16
+    coeff = [-10341.875,  31554.403, -34346.894,  15214.428,  -1730.533]
+    
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} && ".format(procs_path)
+        bin_path = constants.WORK_DIR + '/bert/test.py'
+        #python path
+        python_path = constants.WORK_DIR  + '/python/work2/bin/python'
+        shell_cmd = '/usr/bin/time -v' +  '  '+ python_path  + ' ' + bin_path
+        
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+
+        return full_command
+    
+class TextClassifier(Workload):
+    wname = "text-classify"
+    ideal_mem = 12560
+    binary_name = "python3"
+    min_ratio = 0.75
+    min_mem = int(min_ratio * ideal_mem)
+    cpu_req = 16
+    coeff = [-10341.875,  31554.403, -34346.894,  15214.428,  -1730.533]
+
+    def get_cmdline(self, procs_path, pinned_cpus):
+        prefix = "echo $$ > {} && ".format(procs_path)
+        bin_path = constants.WORK_DIR + '/text-classification/run_cnn.py test'
+        #python path
+        python_path = constants.WORK_DIR  + '/python/work1/bin/python'
+        shell_cmd = '/usr/bin/time -v' +  '  '+ python_path + ' ' + bin_path
+        
+        pinned_cpus_string = ','.join(map(str, pinned_cpus))
+        set_cpu = 'taskset -c {}'.format(pinned_cpus_string)
+        
+        full_command = ' '.join((prefix, 'exec', set_cpu, shell_cmd))
+
+        return full_command
+
 def get_workload_class(wname):
     return {'quicksort': Quicksort,
             'linpack': Linpack,
@@ -454,4 +656,14 @@ def get_workload_class(wname):
             'memaslap': Memaslap,
             'bfs-pre': BfsPre,
             'bfs-exe': BfsExe,
-            'stream': Stream}[wname]
+            'lg-bfs' : Ligra_bfs,
+            'lg-bc' : Ligra_bc,
+            'lg-pagerank' : Ligra_pagerank,
+            'lg-mis' : Ligra_MIS,
+            'lg-components' : Ligra_Components,
+            'stream': Stream,
+            'chatglm':ChatGLM,
+            'clip':Clip,
+            'text-classify':TextClassifier,
+            'chatglm-int4':ChatGLM_int4,
+            'bert-uncased':Bert_Based_Uncased}[wname]
