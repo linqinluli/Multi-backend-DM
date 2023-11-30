@@ -44,13 +44,27 @@ Some workloads' configuration can refer to [CFM](https://github.com/clusterfarme
 
 **chatglm**:
 
+model:refer to https://huggingface.co/THUDM/chatglm2-6b
+
 **chatglm-int4**:
+
+model:refer to https://huggingface.co/THUDM/chatglm2-6b-int4
 
 **clip**:
 
+model:refer to https://huggingface.co/openai/clip-vit-large-patch14
+
+data:refer to https://www.cs.toronto.edu/~kriz/cifar.html
+
 **text-classofy**:
 
+model:refer to https://github.com/gaussic/text-classification-cnn-rnn
+
+data:refer to http://thuctc.thunlp.org/ 
+
 **bet-uncased**:
+
+model:refer to https://huggingface.co/bert-base-uncased
 
 ## System configuration
 
@@ -152,13 +166,14 @@ sudo virsh edit CacheExp
 
 #### 脚本运行
 
-程序运行脚本test.sh，用于运行一轮程序，在里面配置好直接运行即可，注意关掉ssh连接的session之后程序会断掉，所以采用以下指令：
+workload的文件在物理机和虚拟机上都放在`~/aitest/cfm_new`文件夹下。
 
-```shell
-nohup source test.sh >> logs/xxx.log &
-```
+- tt.sh包含新的几个workload的运行代码，直接**在cfm_new工作路径下**运行` ./tt.sh`即可。
+- python文件夹包含运行workload的python环境，text-classify使用work1环境，chatglm、chatglm-int4、clip、bert-uncased使用work2环境。
+- 运行单个workload可以**在cfm_new工作路径下**使用` ./python/work2/bin/python benchmark.py xxx(workload_name)  xx(ratio)`指令。
+- 挂在后台运行模型：**在cfm_new工作路径下**运行` nohup ./tt.sh >> logs/xxx.log &`指令。
 
-
+- 程序运行脚本test.sh，用于运行一轮程序，在里面配置好直接运行即可，注意关掉ssh连接的session之后程序会断掉，所以采用以下指令：`nohup source test.sh >> logs/xxx.log &`。
 
 #### 清除系统page buffer/cache的缓存
 
