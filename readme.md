@@ -1,4 +1,4 @@
-# DMSwitcher
+# FlatDM
 
 code：Experiment code, include the workload code and log process code. 
 
@@ -34,7 +34,7 @@ document：Include documents about how to confige our system.
 |                | text-classify   | √     |                                                     |
 |                | bert-uncased    | √     |                                                     |
 
-### workload configuration
+### Workload configuration
 
 Some workloads' configuration can refer to [CFM](https://github.com/clusterfarmem/cfm): quicksort, linpack, stream, pagerank, kmeans, inception, resnet
 
@@ -72,9 +72,9 @@ model:refer to https://huggingface.co/bert-base-uncased
 
 1. Install qemu-kvm
 
-2. Configure rdma in kvm virtual machine, refer to document [kvm-rdma configuration](document/kvm-rdma configuration.md)
+2. Configure rdma in kvm virtual machine, refer to document `document/kvm-rdma configuration.md`
 
-3. Configure fastswap in kvm virtual maching, refer to document kvm VM [fastswap configuration](document/kvm VM fastswap configuration.md)
+3. Configure fastswap in kvm virtual maching, refer to document `document/kvm VM fastswap configuration.md`
 
 4. Basic configuration of our system has been set up, and you can begin to evaluate different workloads with different system configuration.
 
@@ -97,8 +97,6 @@ nohup ./fastswap/farmemserver/rmserver 50000 32 &
 # instal fastswap module in far memory client
 sudo insmod fastswap_rdma.ko sport=50000 sip="20.20.20.110" cip="20.20.20.94" nq=32
 sudo insmod fastswap.ko
-
-
 ```
 
 **Dram backend**: 
@@ -164,19 +162,19 @@ edit VM-CacheExp's configurations
 sudo virsh edit CacheExp
 ```
 
-#### 脚本运行
+#### e. Other operations
 
-workload的文件在物理机和虚拟机上都放在`~/aitest/cfm_new`文件夹下。
-
-- tt.sh包含新的几个workload的运行代码，直接**在cfm_new工作路径下**运行` ./tt.sh`即可。
-- python文件夹包含运行workload的python环境，text-classify使用work1环境，chatglm、chatglm-int4、clip、bert-uncased使用work2环境。
-- 运行单个workload可以**在cfm_new工作路径下**使用` ./python/work2/bin/python benchmark.py xxx(workload_name)  xx(ratio)`指令。
-- 挂在后台运行模型：**在cfm_new工作路径下**运行` nohup ./tt.sh >> logs/xxx.log &`指令。
-
-- 程序运行脚本test.sh，用于运行一轮程序，在里面配置好直接运行即可，注意关掉ssh连接的session之后程序会断掉，所以采用以下指令：`nohup source test.sh >> logs/xxx.log &`。
-
-#### 清除系统page buffer/cache的缓存
+clear system page buffer/cache
 
 ```shell
+sync
 sudo sh -c "echo 3 > /proc/sys/vm/drop_caches"
+```
+
+### Evaluate workload
+
+After setting up workload, using the following command to execute `chatglm `with 0.5 local memory ratio.
+
+```shell
+python3 benchmark chatglm 0.5
 ```
