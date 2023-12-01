@@ -84,15 +84,25 @@ model:refer to https://huggingface.co/bert-base-uncased
 
 **Rdma backend**: 
 
-```shell
-# driver installation-dram backend
-cd fastswap/drivers/
-make BACKEND=RDMA
+**In far memory server**
 
+```shell
+git clone https://github.com/clusterfarmem/fastswap.git
+cd farmemserver
+make
 # start fastswap service in far memory server，
 # 50000: port number
 # 8: #channels（the same as #CPUs in far memory client）
 nohup ./fastswap/farmemserver/rmserver 50000 32 &
+```
+
+**In far memory client**
+
+```shell
+# driver installation-dram backend
+git clone https://github.com/clusterfarmem/fastswap.git
+cd fastswap/drivers/
+make BACKEND=RDMA
 
 # instal fastswap module in far memory client
 sudo insmod fastswap_rdma.ko sport=50000 sip="20.20.20.110" cip="20.20.20.94" nq=32
