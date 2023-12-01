@@ -55,7 +55,7 @@ After these steps, reboot your system
 
 ### b. Set SR-IOV in MLNX_OFED driver
 
-1）find the NIC port number of your device
+**1）find the NIC port number of your device**
 
 ```shell
 ibstat 
@@ -78,7 +78,7 @@ ibdev2netdev # query binding status of port and NIC devices
 mlx5_0 port 1 ==> enp94s0f0np0 (Up)
 mlx5_1 port 1 ==> enp94s0f1np1 (Up)
 
-2）get the number of VFs hardware supported
+**2）get the number of VFs hardware supported**
 
 ```shell
  cat /sys/class/net/enp94s0f0np0/device/sriov_totalvfs
@@ -88,7 +88,7 @@ result is 4, which means the parameter **NUM_OF_VFS=4** we set.
 
 If the result is empty，it means **intel_iommu=on** failed
 
-3）set number of VFs in software
+**3）set number of VFs in software**
 
 here are 3 methods
 
@@ -107,7 +107,7 @@ Any method is fine, you only need to execute one command.
 
 if `sriov_numvfs` is not exiting, you should check **intel_iommu** whether have been added to grub file.
 
-4）Then set automatic detection of VFs
+**4）Then set automatic detection of VFs**
 
 ```shell
 sudo sh -c "echo 0 > /sys/class/infiniband/mlx5_0/device/mlx5_num_vfs"
@@ -122,7 +122,7 @@ sudo sh -c "echo 4 > /sys/class/infiniband/mlx5_0/device/mlx5_num_vfs"
 
 you should execute step 3) and 4) after you reboot your system.
 
-4）check
+**5）check VF status**
 
 ```shell
 lspci -D | grep Mellanox # PCI状态
@@ -130,26 +130,17 @@ lspci -D | grep Mellanox # PCI状态
 
 ![5.png](figure/5.png)
 
-这里几个VF的基本信息如下：
+**6）Set MAC for VFs**
 
-| PCI Function | VF num |              | MAC               |
-| ------------ |:------:| ------------ | ----------------- |
-| 0000:5e:00.2 | 0      | enp94s0f2np0 | 00:22:33:44:55:66 |
-| 0000:5e:00.3 | 1      | enp94s0f3np0 | 00:22:33:44:55:77 |
-| 0000:5e:00.4 | 2      | enp94s0f4np0 | 00:22:33:44:55:88 |
-| 0000:5e:00.5 | 3      | enp94s0f5np0 | 00:22:33:44:55:99 |
-
-5）为每个VF设置MAC地址
-
-运行
+run, and it shows that all MAC are set empty
 
 ```shell
 ip link show
 ```
 
-看到几个vf都没有分配MAC地址
+![6.png](figure/6.png)
 
-运行以下命令分配MAC地址
+use these command to set MAC for every VF
 
 ```shell
 sudo sh -c "echo 0000:5e:00.2 > /sys/bus/pci/drivers/mlx5_core/unbind"
@@ -159,35 +150,54 @@ sudo ip link set enp94s0f0np0 vf 0 mac 00:22:33:44:55:66
 sudo sh -c "echo 0000:5e:00.2 > /sys/bus/pci/drivers/mlx5_core/bind"
 ```
 
-之后运行 `ip link show`，结果如下，可以看到MAC地址已经配置完成，之后使用此VF0进行实验
+Then run `ip link show`
 
-### 3.虚拟机配置
+Here is the result.
 
-1）为虚拟机添加PCI设备
+![7.png](figure/7.png)
 
-在添加之前关闭虚拟机
+The basic information of the four VFs
 
-2）为虚拟机安装MLNX_OFED，可参考
+| PCI Function | VF Num | NIC Name     | MAC               |
+|:------------:|:------:|:------------:|:-----------------:|
+| 0000:5e:00.2 | 0      | enp94s0f2np0 | 00:22:33:44:55:66 |
+| 0000:5e:00.3 | 1      | enp94s0f3np0 | 00:22:33:44:55:77 |
+| 0000:5e:00.4 | 2      | enp94s0f4np0 | 00:22:33:44:55:88 |
+| 0000:5e:00.5 | 3      | enp94s0f5np0 | 00:22:33:44:55:99 |
+
+### 3.Configure in KVM VM
+
+1）Add VF for VM
+
+you should shutdown VM before you configure it.
+
+![8.png](figure/8.png)
+
+2）install MLNX_OFED driver，you can infer
 
 [Mellanox网卡OFED驱动安装 - 简书 (jianshu.com)](https://www.jianshu.com/p/351635db6cc2)
 
-常用指令
+download the MLNX_OFED driver in iso format, then follow the command
 
 ```shell
-sudo su #进入root权限用户
+sudo su 
 sudo mount -o loop /root/MLNX_OFED_LINUX-5.4-3.5.8.0-ubuntu16.04-x86_64.iso /mnt/iso/
-#挂载镜像
-sudo ./mlnxofedinstall #运行安装程序
-/etc/init.d/openibd restart #重启驱动
-/usr/sbin/ofed_uninstall.sh #卸载驱动
+#
+sudo ./mlnxofedinstall #start installation
+/etc/init.d/openibd restart #restart driver
+/usr/sbin/ofed_uninstall.sh #uninstall driver
 ```
 
-3）为虚拟机配置IP地址
+3）configure IP for VF NIC
+
+Use` ip link show` to find the name of NIC
 
 ```shell
-ifconfig [网卡名] [ip] up
+ifconfig [NIC Name] [ip] up
 ```
 
-4）测试RDMA通信情况，至此可以看到kvm虚拟机中RDMA通信成功，可以进行后续实验
+4）test the RDMA connection between KVM VM and other machine connected with host server
 
-Normalized
+![9.png](figure/9.png)
+
+![10.png](figure/10.png)

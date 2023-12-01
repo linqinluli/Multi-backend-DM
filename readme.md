@@ -74,7 +74,7 @@ model:refer to https://huggingface.co/bert-base-uncased
 
 2. Configure rdma in kvm virtual machine, refer to document `document/kvm-rdma configuration.md`
 
-3. Configure fastswap in kvm virtual maching, refer to document `document/kvm VM fastswap configuration.md`
+3. Configure fastswap in kvm virtual maching. As we have configured VF in VM, you can directly install FASTSWAP in VM. Just refer to [clusterfarmem/fastswap: Fastswap, a fast swap system for far memory through RDMA ](https://github.com/clusterfarmem/fastswap)
 
 4. Basic configuration of our system has been set up, and you can begin to evaluate different workloads with different system configuration.
 
