@@ -1,6 +1,6 @@
-# FlatDM
+# xDM
 
-code：Experiment code, include the workload code and log process code. 
+code：Experiment code, including the workload code and log process code. 
 
 document：Include documents about how to confige our system.
 
