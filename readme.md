@@ -26,15 +26,15 @@ This paper proposes xDM, a multi-backend disaggregated memory system that can ma
 
 ### a. Requirements
 
-1）xDM rdma server：a server with at lease 64G memory, a MT27800 Family [ConnectX-5] NIC(recommend), MLNX_OFED_LINUX-5.8-4.1.5.0 installed (available at [Linux InfiniBand Drivers (nvidia.com)](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/), should match the linux distribution and rdma NIC version.), 
+1）xDM rdma server：a server with at least 64G memory, a MT27800 Family [ConnectX-5] NIC(recommend), MLNX_OFED_LINUX-5.8-4.1.5.0 installed (available at [Linux InfiniBand Drivers (nvidia.com)](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/), should match the Linux distribution and rdma NIC version.), 
 
-2）xDM client：a server with at lease 64G memory, a MT27800 Family [ConnectX-5] NIC(recommend), MLNX_OFED_LINUX-5.8-4.1.5.0 installed (available at [Linux InfiniBand Drivers (nvidia.com)](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/), should match the linux distribution and rdma NIC version.), qemu-kvm installed
+2）xDM client：a server with at least 64G memory, a MT27800 Family [ConnectX-5] NIC(recommend), MLNX_OFED_LINUX-5.8-4.1.5.0 installed (available at [Linux InfiniBand Drivers (nvidia.com)](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/), should match the Linux distribution and rdma NIC version.), require qemu-kvm installed
 
 ### b. Install xDM in xDM client
 
-#### 1）Install vm in xDM client
+#### 1）Install VM in xDM client
 
-Install qemu-kvm, we recommand to install virt-manager to manage VMs
+Install qemu-kvm, we recommend to install virt-manager to manage VMs
 
 ```shell
 sudo apt install qemu-system qemu-utils virt-manager libvirt-clients libvirt-daemon-system -y
@@ -42,9 +42,9 @@ sudo apt install qemu-system qemu-utils virt-manager libvirt-clients libvirt-dae
 
 Install VM with virt-manager. We recommand to use ubuntu 16.04. The next steps are finished in the VMs.
 
-#### 2) Compiling and installing fastswap kernel (vm in xDM client node) , only DRAM and RDMA kernel need this step
+#### 2) Compiling and installing data swap kernel in each vm on the client node, only DRAM and RDMA kernel need this step
 
-We use modified kernel in  [clusterfarmem/fastswap](https://github.com/clusterfarmem/fastswap) and based on the drivers to implement xDM. We also use part of worklods in [clusterfarmem/cfm](https://github.com/clusterfarmem/cfm) .
+We use modified kernel in  [clusterfarmem/fastswap](https://github.com/clusterfarmem/fastswap) and based on the drivers to implement xDM. We also use part of workloads in [clusterfarmem/cfm](https://github.com/clusterfarmem/cfm) .
 
 git clone the repo
 
@@ -66,7 +66,7 @@ git add .
 git commit -m "first commit"
 ```
 
-Now use the provided patch and apply it against your copy of linux-4.11, and use the generic Ubuntu config file for kernel 4.11. You can get the config file from internet, or you can use the one we provide.
+Now you can use the provided patch and apply it against your copy of linux-4.11, and use the generic Ubuntu config file for kernel 4.11. You can get the config file from internet, or you can use the one we provide.
 
 ```shell
 git apply ~/Multi-backend-DM/code/kernel/kernel.patch
@@ -91,14 +91,13 @@ The fastswap kernel has been installed in the VM. If you want to use RDMA or DRA
 
 #### 3) Configure rdma in kvm virtual machine
 
-    Refer to document [configure rdma in kvm VM](document/KVM_RDMA_Configuration.md), in this step, make sure the ofed driver you installed in VM is 4.3 version. The official version 4.3 driver is no longer available, we provide a Google Cloud Drive download [link](https://drive.google.com/file/d/1-kEu_ks2syC62Fg1YYLBFcR3ugT_h3ZD/view?usp=drive_linkhttps://drive.google.com/file/d/1-kEu_ks2syC62Fg1YYLBFcR3ugT_h3ZD/view?usp=drive_link).
+    Refer to document [configure rdma in kvm VM](document/KVM_RDMA_Configuration.md), in this step, make sure the ofed driver you installed in VM is 4.3 version. If the official version 4.3 driver is not available, we provide a Google Cloud Drive download [link](https://drive.google.com/file/d/1-kEu_ks2syC62Fg1YYLBFcR3ugT_h3ZD/view?usp=drive_linkhttps://drive.google.com/file/d/1-kEu_ks2syC62Fg1YYLBFcR3ugT_h3ZD/view?usp=drive_link).
 
 #### 4) Compile backend drivers
 
 **DRAM backend:**
 
-in vm will use DRAM backend in xDM client
-
+Use DRAM backend in xDM client (in VM)
 ```shell
 cd ~/Multi-backend-DM/code/drivers
 make BACKEND=DRAM
@@ -106,7 +105,7 @@ make BACKEND=DRAM
 
 **RDMA backend:**
 
-in vm will use RDMA backend in xDM client
+Use RDMA backend in xDM client (in VM)
 
 ```shell
 cd ~/Multi-backend-DM/code/drivers
@@ -124,9 +123,9 @@ make
 
 ### c. Backend configuration
 
-xDM support 3 types swap backend SSD(disk), DRAM, RDMA. You can configure it after above steps. We offer script for configuration
+xDM supports three types of swap backend SSD (or disk), DRAM, and RDMA. After following the above steps, you can configure it. We offer scripts for configuration.
 
-**SSD(only support Linux simple kernel):**
+**SSD backend (supporting Linux simple kernel):**
 
 ```shell
 cd ~/Multi-backend-DM/code/scripts/
@@ -134,7 +133,7 @@ sudo chmod +x backendswitch.sh
 ./backendswitch.sh ssd $swap_space_size $path_mount_on_ssd
 ```
 
-**DRAM(only support modified Linux kernel)**
+**DRAM backend (supporting modified Linux kernel)**
 
 ```shell
 cd ~/Multi-backend-DM/code/scripts/
@@ -142,7 +141,7 @@ sudo chmod +x backendswitch.sh
 ./backendswitch.sh dram $swap_space_size
 ```
 
-**RDMA(only support modified Linux kernel)**
+**RDMA backend (supporting modified Linux kernel)**
 
 To build and run the far memory server do(xDM RDMA server):
 
@@ -163,11 +162,11 @@ sudo chmod +x backendswitch.sh
 
 ### a. Backend switch
 
-Using `code/scripts/backendswitch.sh`, we strongly suggest to use SSD backend without modified kernel for it may cause the system crush. We will solve the problem in the next version.
+Using `code/scripts/backendswitch.sh`, we strongly suggest to use SSD backend without the modified kernel for it may cause the system crush. We will solve the problem in the next version.
 
-Configure a new backend or switch to another backend can be finished to use the script. Just follow steps in **Backend configuration**.
+Configure a new backend or switch to another backend can be finished to use the script. Just follow the steps in **Backend configuration**.
 
-### b. Swap Granularity( by turning on/off THP)
+### b. Configuring data granularity (by turning on/off THP)
 
 turn on THP
 
@@ -181,7 +180,7 @@ turn off THP
 sudo sh -c "echo never> /sys/kernel/mm/transparent_hugepage/enabled"
 ```
 
-### c. Number of CPUs
+### c. Configuring  I/O bandwidth (by assigning CPU core numbers) 
 
 The number of CPUs can be only configured by kvm. You should shut down the VM server and start it.
 
@@ -191,8 +190,20 @@ sudo virsh edit CacheExp
 # query the number of CPUs
 cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
 ```
+### d. Configuring data distribution (by assigning local memory ratio) 
+Here is a example of how to evaluate **chatglm** with 0.5 local memory ratio.
 
-Here are other vm opertions the may be used:
+```shell
+cd ~/Multi-backend-DM/code/eval
+python3 benchmark chatglm 0.5
+
+Here is an example of hot to configure NUMA node assignment.
+
+```shell
+numactl --cpunodebind=0 --membind=0 ./test
+numactl -C 0-1 ./test
+
+### Here are other operations in VM that may be used:
 
 list running VMs
 
@@ -226,9 +237,9 @@ sudo virsh edit CacheExp
 
 ## 3. System evaluation
 
-Here are workloads we supported now.
+Here are the workloads we support now.
 
-| type           | name            | state |                                                     |
+| type           | name            | state |                          Notes                           |
 |:--------------:|:---------------:|:-----:| --------------------------------------------------- |
 | C/C++          | quicksort       | √     |                                                     |
 |                | linpack         | √     |                                                     |
@@ -254,7 +265,7 @@ Here are workloads we supported now.
 |                | text-classify   | √     |                                                     |
 |                | bert-uncased    | √     |                                                     |
 
-### a. Workloads configuration
+### a. Workload preparation
 
 Some workloads' configuration can refer to [CFM](https://github.com/clusterfarmem/cfm): quicksort, linpack, stream, pagerank, kmeans, inception, resnet
 
@@ -276,7 +287,7 @@ model:refer to [openai/clip-vit-large-patch14 · Hugging Face](https://huggingfa
 
 data:refer to [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html)
 
-**text-classofy**:
+**text-classify**:
 
 model:refer to [GitHub - gaussic/text-classification-cnn-rnn: CNN-RNN中文文本分类，基于TensorFlow](https://github.com/gaussic/text-classification-cnn-rnn)
 
@@ -304,7 +315,7 @@ model:refer to [openai/clip-vit-large-patch14 · Hugging Face](https://huggingfa
 
 data:refer to [CIFAR-10 and CIFAR-100 datasets](https://www.cs.toronto.edu/~kriz/cifar.html)
 
-**text-classofy**:
+**text-classify**:
 
 model:refer to [GitHub - gaussic/text-classification-cnn-rnn: CNN-RNN中文文本分类，基于TensorFlow](https://github.com/gaussic/text-classification-cnn-rnn)
 
@@ -314,7 +325,7 @@ data:refer to [http://thuctc.thunlp.org/](http://thuctc.thunlp.org/)
 
 model:refer to [google-bert/bert-base-uncased · Hugging Face](https://huggingface.co/bert-base-uncased)
 
-### b. Evaluate a single workload
+### b. Evaluate individual workloads
 
 #### 1) Disable cgroup V1
 
@@ -334,7 +345,7 @@ The framework and scripts rely on the cgroup system to be mounted at /cgroup2. P
 - Run `sudo mkdir /cgroup2` to create root mount point
 - Execute `code/scripts/init_bench_cgroups.sh`
 
-Here is a example of how to evaluate **chatglm** with 0.5 local memory ratio.
+Here is an example of how to evaluate **chatglm** with a 0.5 local memory ratio.
 
 ```shell
 cd ~/Multi-backend-DM/code/eval
@@ -357,7 +368,7 @@ chmod +x ~/Multi-backend-DM/scripts/install_workloads.sh
 sh ~/Multi-backend-DM/scripts/install_workloads.sh $log_file_name
 ```
 
-### d. Process logs
+### d. Generate results (processing logs)
 
 Use script in **code/log_process** to process log file.
 
