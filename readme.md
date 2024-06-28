@@ -1,12 +1,28 @@
 # xDM
 
-code：Experiment code, including the workload code and log process code. 
+Our paper **Boosting Data Center Performance via Intelligently Managed Multi-backend Disaggregated Memory** has been accepted in SC'24. 
 
-document：Include documents about how to confige our system.
+This paper proposes xDM, a multi-backend disaggregated memory system that can manage multiple far memory paths with high performance.
 
-scripts：backend switch scripts
+## File description
 
-## 1. Multi-backend System configuration
+`code`: Source code
+
+        `code/drivers`: Source code of RDMA and DRAM backend drivers.
+
+        `code/eval`: Source code of different workloads.
+
+        `code/farmemserver`: Source code of RDMA server.
+
+        `code/kernel`: Source code of fastswap kernel.
+
+        `code/log_process`: Source code of log process.
+
+        `code/scripts`: Source code of scripts used in installation.
+
+`document`：Include documents about how to confige our system.
+
+## 1. xDM path configuration
 
 ### a. Requirements
 
@@ -143,7 +159,7 @@ sudo chmod +x backendswitch.sh
 ./backendswitch.sh rdma $rdma_server_ip $rdma_server_port $rdma_client_ip
 ```
 
-## 2. System parameters modification
+## 2. xDM parameter modification
 
 ### a. Backend switch
 
@@ -151,7 +167,7 @@ Using `code/scripts/backendswitch.sh`, we strongly suggest to use SSD backend wi
 
 Configure a new backend or switch to another backend can be finished to use the script. Just follow steps in **Backend configuration**.
 
-### b. Swap Granularity( by turn on/off THP)
+### b. Swap Granularity( by turning on/off THP)
 
 turn on THP
 
@@ -208,7 +224,7 @@ edit VM-CacheExp's configurations
 sudo virsh edit CacheExp
 ```
 
-## 3. Evaluate workloads
+## 3. System evaluation
 
 Here are workloads we supported now.
 
@@ -346,5 +362,5 @@ sh ~/Multi-backend-DM/scripts/install_workloads.sh $log_file_name
 Use script in **code/log_process** to process log file.
 
 ```shell
-python ~/Multi-backend-DM/code/log_process
+python ~/Multi-backend-DM/code/log_process/log_process.py $log_file_path
 ```
