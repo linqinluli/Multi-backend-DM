@@ -53,7 +53,7 @@ case "$backend" in
     "dram")
         cd drivers
         make BACKEND=DRAM
-        sudo insmod fastswap_dram.ko
+        sudo insmod fastswap_dram.ko $swap_size
         sudo insmod fastswap.ko
         ;;
     *)

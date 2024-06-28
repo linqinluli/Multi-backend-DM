@@ -30,11 +30,12 @@ for i in range(len(lines)):
     wtime = 0
     dataline = []
     is_data = 0
-    model_name = ""
-    local_ratio = 0
     imgsec = 0
     GFloops = 0
-
+    if '0 memory limit to ' in lines[i]:
+        model_name = str(lines[i].split()[1])
+        model_name = model_name[:-1]
+        local_ratio = float(str(lines[i].split()[5])[:-1])/100
     if 'Maximum resident set size (kbytes):' in lines[i]:
         maxrss = float(lines[i].split()[5])
     if lines[i] == 'Size   LDA    Align.  Average  Maximal\n':
@@ -52,9 +53,6 @@ for i in range(len(lines)):
         stime = float(linelist[1])
         utime = float(linelist[2])
         wtime = float(linelist[3])
-        linelist2 = lines[i+2].split(" ")
-        model_name = str(linelist2[0])
-        local_ratio = float(linelist2[1])
     
     if is_data == 1:
         if flag == 1:
@@ -62,19 +60,8 @@ for i in range(len(lines)):
         if flag == 2:
             GFloops = 0
 
-        workload_size = ""
-        if model_name == "chatglm":
-            workload_size = "25352MB"
-        if model_name == "clip":
-            workload_size = "1850MB"
-        if model_name == "chatglm-int4":
-            workload_size = "8150MB"
-        if model_name == "text-classify":
-            workload_size = "12560MB"
-        if model_name == "bert-uncased":
-            workload_size = "1410MB"
         
-        dataline = [kernel_name, backend, thp_state, cpu_num, model_name, workload_size, local_ratio, pf, stime, utime, wtime, GFloops, imgsec, maxrss]
+        dataline = [kernel_name, backend, thp_state, cpu_num, model_name, local_ratio, pf, stime, utime, wtime, GFloops, imgsec, maxrss]
         with open("test.csv", "a", newline='') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(dataline)

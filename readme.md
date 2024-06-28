@@ -131,7 +131,7 @@ xDM support 3 types swap backend SSD(disk), DRAM, RDMA. You can configure it aft
 ```shell
 cd ~/Multi-backend-DM/code/scripts/
 sudo chmod +x backendswitch.sh
-./backendswitch.sh ssd $swap_space_size $path_mount_on_ssd
+./backendswitch.sh ssd $path_mount_on_ssd
 ```
 
 **DRAM(only support modified Linux kernel)**
@@ -139,7 +139,7 @@ sudo chmod +x backendswitch.sh
 ```shell
 cd ~/Multi-backend-DM/code/scripts/
 sudo chmod +x backendswitch.sh
-./backendswitch.sh dram $swap_space_size
+./backendswitch.sh dram
 ```
 
 **RDMA(only support modified Linux kernel)**
