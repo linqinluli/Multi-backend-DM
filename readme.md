@@ -368,7 +368,7 @@ Then evaluate mutil workloads:
 
 ```shell
 chmod +x ~/Multi-backend-DM/scripts/install_workloads.sh
-sh ~/Multi-backend-DM/scripts/install_workloads.sh $log_file_name
+sh ~/Multi-backend-DM/scripts/eval_workloads.sh $log_file_name
 ```
 
 ### d. Generate results (processing logs)
