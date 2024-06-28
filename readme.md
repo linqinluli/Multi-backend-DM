@@ -26,7 +26,7 @@ This paper proposes xDM, a multi-backend disaggregated memory system that can ma
 
 ### a. Requirements
 
-1）xDM rdma server：a server with at least 64G memory, a MT27800 Family [ConnectX-5] NIC(recommend), MLNX_OFED_LINUX-5.8-4.1.5.0 installed (available at [Linux InfiniBand Drivers (nvidia.com)](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/), should match the Linux distribution and rdma NIC version.),
+1）xDM rdma server：a server with at least 64G memory, a MT27800 Family [ConnectX-5] NIC(recommend), MLNX_OFED_LINUX-5.8-4.1.5.0 installed (available at [Linux InfiniBand Drivers (nvidia.com)](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/), should match the Linux distribution and rdma NIC version.), 
 
 2）xDM client：a server with at least 64G memory, a MT27800 Family [ConnectX-5] NIC(recommend), MLNX_OFED_LINUX-5.8-4.1.5.0 installed (available at [Linux InfiniBand Drivers (nvidia.com)](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/), should match the Linux distribution and rdma NIC version.), require qemu-kvm installed
 
@@ -44,7 +44,7 @@ Install VM with virt-manager. We recommand to use ubuntu 16.04. The next steps a
 
 #### 2) Compiling and installing data swap kernel in each vm on the client node, only DRAM and RDMA kernel need this step
 
-We use modified kernel in [clusterfarmem/fastswap](https://github.com/clusterfarmem/fastswap) and based on the drivers to implement xDM. We also use part of workloads in [clusterfarmem/cfm](https://github.com/clusterfarmem/cfm) .
+We use modified kernel in  [clusterfarmem/fastswap](https://github.com/clusterfarmem/fastswap) and based on the drivers to implement xDM. We also use part of workloads in [clusterfarmem/cfm](https://github.com/clusterfarmem/cfm) .
 
 git clone the repo
 
@@ -131,7 +131,7 @@ xDM supports three types of swap backend SSD (or disk), DRAM, and RDMA. After fo
 ```shell
 cd ~/Multi-backend-DM/code/scripts/
 sudo chmod +x backendswitch.sh
-./backendswitch.sh ssd $swap_space_size $path_mount_on_ssd
+./backendswitch.sh ssd $path_mount_on_ssd
 ```
 
 **DRAM backend (supporting modified Linux kernel)**
@@ -139,7 +139,7 @@ sudo chmod +x backendswitch.sh
 ```shell
 cd ~/Multi-backend-DM/code/scripts/
 sudo chmod +x backendswitch.sh
-./backendswitch.sh dram $swap_space_size
+./backendswitch.sh dram
 ```
 
 **RDMA backend (supporting modified Linux kernel)**
@@ -181,7 +181,7 @@ turn off THP
 sudo sh -c "echo never> /sys/kernel/mm/transparent_hugepage/enabled"
 ```
 
-### c. Configuring I/O bandwidth (by assigning CPU core numbers)
+### c. Configuring  I/O bandwidth (by assigning CPU core numbers)
 
 The number of CPUs can be only configured by kvm. You should shut down the VM server and start it.
 
@@ -243,7 +243,7 @@ sudo virsh edit CacheExp
 Here are the workloads we support now.
 
 | type           | name            | state | Notes                                               |
-| -------------- | --------------- | ----- | --------------------------------------------------- |
+|:--------------:|:---------------:|:-----:| --------------------------------------------------- |
 | C/C++          | quicksort       | √     |                                                     |
 |                | linpack         | √     |                                                     |
 |                | stream          | √     |                                                     |
