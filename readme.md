@@ -1,6 +1,6 @@
 # xDM
 
-
+[![DOI](https://zenodo.org/badge/650067259.svg)](https://zenodo.org/doi/10.5281/zenodo.12586152)
 
 Our paper **Boosting Data Center Performance via Intelligently Managed Multi-backend Disaggregated Memory** has been accepted in SC'24.
 
