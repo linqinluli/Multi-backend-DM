@@ -360,15 +360,15 @@ python3 benchmark chatglm 0.5
 Make sure you have installed the workloads install in the `code\eval` path. Here is a script to quickly install workloads we provide in the repo.
 
 ```shell
-chmod +x ~/Multi-backend-DM/scripts/install_workloads.sh
-sh ~/Multi-backend-DM/scripts/install_workloads.sh
+chmod +x ~/Multi-backend-DM/code/scripts/install_workloads.sh
+sh ~/Multi-backend-DM/code/scripts/install_workloads.sh
 ```
 
 Then evaluate mutil workloads:
 
 ```shell
-chmod +x ~/Multi-backend-DM/scripts/install_workloads.sh
-sh ~/Multi-backend-DM/scripts/eval_workloads.sh $log_file_name
+chmod +x ~/Multi-backend-DM/code/scripts/install_workloads.sh
+sh ~/Multi-backend-DM/code/scripts/eval_workloads.sh $log_file_name
 ```
 
 ### d. Generate results (processing logs)
