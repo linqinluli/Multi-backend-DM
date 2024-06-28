@@ -7,7 +7,7 @@
 #define TEST_NZ(x) do { if ( (x)) die("error: " #x " failed (returned non-zero)." ); } while (0)
 #define TEST_Z(x)  do { if (!(x)) die("error: " #x " failed (returned zero/null)."); } while (0)
 
-const size_t BUFFER_SIZE = 1024 * 1024 * 1024 * 32l;
+size_t BUFFER_SIZE = 1024 * 1024 * 1024 * 32l;
 const unsigned int NUM_PROCS = 8;
 const unsigned int NUM_QUEUES_PER_PROC = 3;
 const unsigned int NUM_QUEUES = NUM_PROCS * NUM_QUEUES_PER_PROC;
@@ -62,13 +62,21 @@ int main(int argc, char **argv)
   struct rdma_cm_id *listener = NULL;
   uint16_t port = 0;
 
-  if (argc != 2) {
-    die("Need to specify a port number to listen");
+  if (argc != 3) {
+      die("Usage: program <port> <buffer_multiplier>");
   }
 
   addr.sin_family = AF_INET;
   addr.sin_port = htons(atoi(argv[1]));
 
+
+  int buffer_multiplier = atoi(argv[2]);
+  if (buffer_multiplier <= 0) {
+      die("Buffer multiplier must be a positive integer");
+  }
+
+  BUFFER_SIZE = 1024 * 1024 * 1024 * buffer_multiplier;
+  
   TEST_NZ(alloc_control());
 
   TEST_Z(ec = rdma_create_event_channel());

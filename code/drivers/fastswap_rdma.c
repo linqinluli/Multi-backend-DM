@@ -12,7 +12,7 @@ static char serverip[INET_ADDRSTRLEN];
 static char clientip[INET_ADDRSTRLEN];
 static struct kmem_cache *req_cache;
 module_param_named(sport, serverport, int, 0644);
-module_param_named(nq, numqueues, int, 0644);
+// module_param_named(nq, numqueues, int, 0644);
 module_param_string(sip, serverip, INET_ADDRSTRLEN, 0644);
 module_param_string(cip, clientip, INET_ADDRSTRLEN, 0644);
 

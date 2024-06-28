@@ -16,7 +16,19 @@ scripts：backend switch scripts
 
 ### b. Install xDM in xDM client
 
-#### 1) Compiling and installing fastswap kernel (vm in xDM client node) , only DRAM and RDMA kernel need this step
+#### 1）Install vm in xDM client
+
+Install qemu-kvm, we recommand to install virt-manager to manage VMs
+
+```shell
+sudo apt install qemu-system qemu-utils virt-manager libvirt-clients libvirt-daemon-system -y
+```
+
+Install VM with virt-manager. We recommand to use ubuntu 16.04. The next steps are finished in the VMs.
+
+#### 2) Compiling and installing fastswap kernel (vm in xDM client node) , only DRAM and RDMA kernel need this step
+
+We use modified kernel in  [clusterfarmem/fastswap](https://github.com/clusterfarmem/fastswap) and based on the drivers to implement xDM. We also use part of worklods in [clusterfarmem/cfm](https://github.com/clusterfarmem/cfm) .
 
 git clone the repo
 
@@ -59,11 +71,13 @@ cd ..
 sudo dpkg -i *.deb
 ```
 
-#### 2) Configure rdma in kvm virtual machine
+The fastswap kernel has been installed in the VM. If you want to use RDMA or DRAM backend, you should boot system with the modified 4.11 fastswap kernel.
+
+#### 3) Configure rdma in kvm virtual machine
 
     Refer to document [configure rdma in kvm VM](document/KVM_RDMA_Configuration.md), in this step, make sure the ofed driver you installed in VM is 4.3 version. The official version 4.3 driver is no longer available, we provide a Google Cloud Drive download [link](https://drive.google.com/file/d/1-kEu_ks2syC62Fg1YYLBFcR3ugT_h3ZD/view?usp=drive_linkhttps://drive.google.com/file/d/1-kEu_ks2syC62Fg1YYLBFcR3ugT_h3ZD/view?usp=drive_link).
 
-#### 3) Compile backend drivers
+#### 4) Compile backend drivers
 
 **DRAM backend:**
 
