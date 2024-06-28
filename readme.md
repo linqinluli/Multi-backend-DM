@@ -124,7 +124,12 @@ make
 
 ### c. Backend configuration
 
-xDM supports three types of swap backend SSD (or disk), DRAM, and RDMA. After following the above steps, you can configure it. We offer scripts for configuration.
+xDM supports three types of swap backend SSD (or disk), DRAM, and RDMA. After following the above steps, you can configure it. We offer scripts for configuration. Before you use configure backend, you should have 32G swap space set.
+
+```shell
+free -g | grep swap
+# Swap:             32           0           32
+```
 
 **SSD backend (supporting Linux simple kernel):**
 
@@ -147,7 +152,7 @@ sudo chmod +x backendswitch.sh
 To build and run the far memory server do(xDM RDMA server):
 
 ```shell
-./rmserver $port $far_memory_size
+./rmserver $port $far_memory_size $cpu_num_in_rdma_client
 ```
 
 Configure rdma backend in xDM client
@@ -199,12 +204,14 @@ Here is a example of how to evaluate **chatglm** with 0.5 local memory ratio.
 ```shell
 cd ~/Multi-backend-DM/code/eval
 python3 benchmark chatglm 0.5
+```
 
 Here is an example of hot to configure NUMA node assignment.
 
 ```shell
 numactl --cpunodebind=0 --membind=0 ./test
 numactl -C 0-1 ./test
+```
 
 ### Here are other operations in VM that may be used:
 

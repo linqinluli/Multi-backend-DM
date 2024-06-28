@@ -8,9 +8,9 @@
 #define TEST_Z(x)  do { if (!(x)) die("error: " #x " failed (returned zero/null)."); } while (0)
 
 size_t BUFFER_SIZE = 1024 * 1024 * 1024 * 32l;
-const unsigned int NUM_PROCS = 8;
-const unsigned int NUM_QUEUES_PER_PROC = 3;
-const unsigned int NUM_QUEUES = NUM_PROCS * NUM_QUEUES_PER_PROC;
+unsigned int NUM_PROCS = 8;
+unsigned int NUM_QUEUES_PER_PROC = 3;
+unsigned int NUM_QUEUES = NUM_PROCS * NUM_QUEUES_PER_PROC;
 
 struct device {
   struct ibv_pd *pd;
@@ -62,8 +62,8 @@ int main(int argc, char **argv)
   struct rdma_cm_id *listener = NULL;
   uint16_t port = 0;
 
-  if (argc != 3) {
-      die("Usage: program <port> <buffer_multiplier>");
+  if (argc != 4) {
+      die("Usage: program <port> <buffer_multiplier> <cpu num in client>");
   }
 
   addr.sin_family = AF_INET;
@@ -75,6 +75,10 @@ int main(int argc, char **argv)
       die("Buffer multiplier must be a positive integer");
   }
 
+  NUM_PROCS = atoi(argv[3]);
+  NUM_QUEUES_PER_PROC = 3;
+  NUM_QUEUES = NUM_PROCS * NUM_QUEUES_PER_PROC;
+  
   BUFFER_SIZE = 1024 * 1024 * 1024 * buffer_multiplier;
   
   TEST_NZ(alloc_control());

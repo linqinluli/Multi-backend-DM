@@ -9,6 +9,21 @@ sport="$3"
 farmemip="$2"
 clientip="$4"
 
+# Use lsmod to check currently installed modules
+modules=$(lsmod)
+
+# Unload fastswap_rdma and fastswap
+if echo "$modules" | grep -q "fastswap_rdma"; then
+    sudo rmmod fastswap
+    sudo rmmod fastswap_rdma
+fi
+
+# Unload fastswap_dram and fastswap
+if echo "$modules" | grep -q "fastswap_dram"; then
+    sudo rmmod fastswap
+    sudo rmmod fastswap_dram
+fi
+
 # Handle different backends
 case "$backend" in
     ssd)
@@ -24,30 +39,19 @@ case "$backend" in
         sudo swapon "$path"
         ;;
     dram)
-        # Create a 32GB /tmp/swapfile
-        sudo dd if=/dev/zero of=/tmp/swapfile bs=1M count=32768
-
-        # Create swap
-        sudo mkswap /tmp/swapfile
-        sudo swapon /tmp/swapfile
-
+        cd ~/Multi-backend-DM/code/drivers
         # Change to drivers directory and compile
         start_time=$(date +%s.%N)
-        cd drivers
-        make BACKEND=DRAM
+        
+
         sudo insmod fastswap_dram.ko
         sudo insmod fastswap.ko
         ;;
     rdma)
-        # Create a 32GB /tmp/swapfile
-        sudo dd if=/dev/zero of=/tmp/swapfile bs=1M count=32768
-
-        # Create swap
-        sudo mkswap /tmp/swapfile
-        sudo swapon /tmp/swapfile
+        cd ~/Multi-backend-DM/code/drivers
         start_time=$(date +%s.%N)
         # Load rdma module with specified parameters
-        sudo insmod fastswap_rdma.ko sport="$sport" sip="$farmemip" cip="$clientip" nq=8
+        sudo insmod fastswap_rdma.ko sport="$sport" sip="$farmemip" cip="$clientip"
         sudo insmod fastswap.ko
         ;;
     *)
