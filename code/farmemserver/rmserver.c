@@ -79,7 +79,7 @@ int main(int argc, char **argv)
   NUM_QUEUES_PER_PROC = 3;
   NUM_QUEUES = NUM_PROCS * NUM_QUEUES_PER_PROC;
   
-  BUFFER_SIZE = 1024 * 1024 * 1024 * buffer_multiplier;
+  BUFFER_SIZE = 1024 * 1024 * 1024l * buffer_multiplier;
   
   TEST_NZ(alloc_control());
 
